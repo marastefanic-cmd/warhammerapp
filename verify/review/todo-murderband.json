@@ -1,0 +1,188 @@
+[
+ {
+  "army": "murderband",
+  "kind": "list-source",
+  "where": "murderband · source line",
+  "judgement": {
+   "source": "New Recruit, exported by 23 Nov 2026 (JSON): a friend’s list",
+   "from": "verify/sources/hand/murderband.json source (from-json.js and reimport.js both read it; it overrides the commit date)",
+   "check": "the export’s date cannot be taken from the export: it has none. The line says “by 23 Nov 2026”, the day the file was first committed (7601876), not a day the export prints. Is that acceptable, or does the owner know the day the friend exported it?"
+  },
+  "source": {
+   "why": "the friend’s New Recruit JSON export; the roster has no date field (name, id, costs, costLimits, forces, generatedBy, game system only); no upload stamp of it is recorded; the earliest record is commit 7601876 (23 Nov 2026 13:43 UTC), verify/sources/import-friend/murderband.json",
+   "evidence": "verify/sources/nr-json/murderband.json (byte for byte verify/sources/import-friend/murderband.json, cmp); git log -- verify/sources/import-friend/murderband.json",
+   "format": "the line starts “New Recruit, exported ” as every list’s: app.html listDate reads its date (sort order, newest first: Murderband now above Healybois), verify/import-test.js INTENDED and verify/build-parity.js P2 set it aside"
+  },
+  "key": "murderband|source"
+ },
+ {
+  "army": "murderband",
+  "kind": "value-note",
+  "where": "murderband · Lord Invocatus · Bolt pistol BS",
+  "judgement": {
+   "app": "4+ (GW’s)",
+   "newRecruit": "2+",
+   "where": "verify/sources/nr-values.json (new entry world-eaters/lord-invocatus ranged Bolt pistol BS, gw 4+, nr 2+, evidence and reason) → data.js BUILD_INDEX.gw[\"world-eaters/lord-invocatus\"] = {\"ranged|Bolt pistol|BS\":\"2+\"} (verify/build-index.js; it fails unless 4+ is the DATASHEETS row’s)",
+   "why nr-values, not deviations-nr": "verify/nr.js checks an export-only list (no New Recruit PDF) for base sizes only, so a deviations-nr.json entry for the BS was reported stale; nr-values.json is the file for a catalogued datasheet no export or PDF of the owner’s shows, which is true of Lord Invocatus (the friend’s export is not the owner’s); its _about now says so",
+   "shown": "built-in Murderband: Bolt pistol BS 4+, no “‡” and no on-screen note (as the owner’s lists show their declared New Recruit values, e.g. Lite Knights’ Gun Stock A 2); the note quoting both is the nr-values.json entry (and this item). The phone import of the same export: 4+ and the Overview note “Values: GW’s are used where the export’s differ: Lord Invocatus, Bolt pistol BS 2+ in the export, 4+ by GW.” With the declaration removed (import-test): 4+ with “‡” on the row (gwx) and the same note.",
+   "openQuestion": "the built-in list shows GW’s 4+ without an on-screen note, as every built-in list does for a declared value. If the built-in list must say so on screen, that is an app.html change (the gwValues note is only in an imported list’s “On this phone” footer) and it would also put a note on Lite Knights (Gun Stock A); not done here"
+  },
+  "source": {
+   "gw": "verify/.cache/waha/ds/world-eaters_Lord-Invocatus.html RANGED WEAPONS: Bolt pistol [PISTOL] 12\" 1 4+ 5 -1 1",
+   "factionPack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 271-273 (Datasheets, Change the following weapon characteristics): “Bolt Pistol S5 AP -1 Khorne Berzerkers, Lord Invocatus, Master of Executions” (S and AP only; no BS change)",
+   "export": "verify/sources/nr-json/murderband.json, Lord Invocatus, Bolt pistol: 12\" 1 2+ 5 -1 1 Pistol"
+  },
+  "key": "murderband|bs-note"
+ },
+ {
+  "army": "murderband",
+  "kind": "values",
+  "where": "murderband · every other value",
+  "judgement": {
+   "rule": "every other profile value is GW’s datasheet’s (Wahapedia, World Eaters Faction Pack on top), or GW’s with a rule of the list marked “+”",
+   "marks": "Relentless Rage (Berzerker Warband: +1 A to melee attacks) on every melee weapon: Angron strike 9 / sweep 17, Coward’s Bane 8, Bladed horn 5, Lacerator and daemonic claw 7, Exalted Eightbound Chainblades 5, Chaos Terminators Power fist 4 / Paired accursed weapons 6 / Chainfist 4, Jakhals Chainblades 4, Paired manglers 5, Forgefiend claws 7; Gore-stained Veterans (+1 WS) on the three Chaos Terminators units’ melee weapons (Power fist 2+, Paired accursed weapons 2+, Chainfist 3+)",
+   "bases": "Lord Invocatus 90×52.5mm Oval and Forgefiend 120×92mm Oval, GW’s base size guide (New Recruit 90x52.5mm, 120x92mm): verify/deviations-nr.json, by verify/from-json.js",
+   "gate": "numbers, marks, nr, bases, catalog, keywords, words pass"
+  },
+  "source": {
+   "evidence": "verify/out/from-json-murderband.md (Values a rule of the list changes: 15 rows; Kept from the datasheet row)"
+  },
+  "key": "murderband|values"
+ },
+ {
+  "army": "murderband",
+  "kind": "points",
+  "where": "murderband · points",
+  "judgement": {
+   "total": "2000 of 2000 (the export’s roster cost 2000; builder.js finds no unit whose GW cost differs: no gwPoints note)",
+   "units": [
+    "Angron 330",
+    "Lord Invocatus 100",
+    "Slaughterbound 90 + Battle-lust 20, leading Exalted Eightbound (3 models) 130 = 240",
+    "Chaos Terminators (10) 350 + Gore-stained Veterans 20 = 370, ×2 (1st and 2nd unit)",
+    "Chaos Terminators (10, 3rd unit) 360 + Gore-stained Veterans 20 = 380",
+    "Jakhals (10) 65",
+    "Forgefiend 140 + Ectoplasma cannon 5 = 145"
+   ],
+   "note": "the export has three Chaos Terminators units, not two (the 3rd at GW’s 3rd-unit cost); three Gore-stained Veterans Upgrades, the limit of three"
+  },
+  "source": {
+   "gw": "data.js DATASHEETS points (Wahapedia YOUR UNIT COSTS: Chaos Terminators 1-2: 10 models 350, 3+: 360; Exalted Eightbound 3 models 130; Forgefiend 140, Ectoplasma cannon 5; Jakhals 10 models 65); Butchers of Khorne Gore-stained Veterans 20 pts; Berzerker Warband Battle-lust 20 pts",
+   "gate": "points: every list unit’s points are GW’s costs (pass)"
+  },
+  "key": "murderband|points"
+ },
+ {
+  "army": "murderband",
+  "kind": "summaries",
+  "where": "murderband · AI summary columns",
+  "judgement": {
+   "result": "no new summary: every line the program places on Murderband’s units finds an existing sumAtk / sumDef / sumSt / sumFoe / sumOv or gist (verify/lines.js LM passes), all of World Eaters’ catalogue (aiRead) or of the World Eaters lists, fingerprints current (537 of 537), and helpers lists 808 judgements, 808 approved, 0 to check: the list’s judgements are keyed on the same judgement and source text as approved ones",
+   "check": "that no line of Murderband’s sheets needs a summary of its own (Lord Invocatus’s Fire Riders and Bloody Stampede, now on a list for the first time; Slaughterbound leading Exalted Eightbound with Battle-lust; three Chaos Terminators units with Gore-stained Veterans)"
+  },
+  "source": {
+   "gate": "lines (LM, LN, LO), fingerprints, helpers"
+  },
+  "key": "murderband|summaries"
+ },
+ {
+  "army": "murderband",
+  "kind": "hand-file",
+  "where": "verify/sources/hand/murderband.json",
+  "judgement": {
+   "entries": {
+    "source": "the source line, with its why (item murderband|source)"
+   },
+   "nothing else": "a catalogued list’s entry is builder.js’s; no gists, units, texts or ids"
+  },
+  "source": {
+   "gate": "reimport (2): every hand-file entry carries its reason (pass)"
+  },
+  "key": "murderband|hand"
+ },
+ {
+  "army": "murderband",
+  "kind": "derive-unread",
+  "where": "verify/derive-unread.json",
+  "judgement": {
+   "added": [
+    "ability-timing | murderband · Chaos Terminators [chaos-terminators] · Gore-stained Veterans",
+    "ability-timing | murderband · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans"
+   ],
+   "how": "node verify/derive.js --unread: the program reads {ph:[fight], turn:either} (melee-only-keyword, melee); the signed-off lists show no label (super-terminators’ two entries, the same words d6f3aa97), so no label, as builder.js gives the phone (BUILD_INDEX labels skip it by name and words already)"
+  },
+  "source": {
+   "why": "without them from-json’s reading labels the Upgrade and differs from builder.js’s entry (reimport 4)"
+  },
+  "key": "murderband|derive-unread"
+ },
+ {
+  "army": "murderband",
+  "kind": "code",
+  "where": "verify/gw-order.js, verify/from-json.js",
+  "judgement": {
+   "changes": [
+    "gw-order.js wahaSectionsOf: a box whose parts have lines of their own after the first (Angron’s WRATHFUL PRESENCE: Driven by Ultimate Rage’s “… melee attacks can:” and its two “- Re-roll …” bullets) is split into its parts when an ability of the datasheet selects “one <box> ability” of a box not named “… Abilities” (selectsOne: “select one Wrathful Presence ability”); selectsFrom also takes that wording, so from-json’s pickOf gives the parts’ who “Wrathful Presence: pick one”. Before, the box (all three parts in one text) was read as the ability Wrathful Presence and the three parts as not printed",
+    "from-json.js: GW’s words replace a shared row’s only where they differ beyond markup, compared by gw-order’s norm (verify/words.js’s normalisation: bold, “- ” bullets, line breaks, a typographic hyphen); before, only ** was set aside, so Bloody Fury’s bullets and Driven by Ultimate Rage’s “Re‐roll **hit rolls**” overwrote the rows the PDF-made lists share",
+    "from-json.js: an ability of a shared row keeps the row’s labels also on a unit named with its id (“Chaos Terminators [chaos-terminators-2]”, a list with two units of one name); before, Murderband’s Bloody Fury got derive.js’s form {turn:either, turns:{shooting:your}} against the row’s equal {turn:your, turns:{charge:either}}, a conflict that put over on Super Terminators’ units"
+   ],
+   "check": "each is a reading fix, not a rule: no other list’s data.js changes (reimport: all 25 exports byte for byte; tables: 0 datasheet facts kept per list), words, texts and catalog pass"
+  },
+  "source": {
+   "files": [
+    "verify/gw-order.js",
+    "verify/from-json.js"
+   ],
+   "why": "Murderband is the first World Eaters list made from an export alone (no PDF), so from-json read Angron’s and the Chaos Terminators’ Wahapedia pages where the PDF-made lists had read their PDFs"
+  },
+  "key": "murderband|code"
+ },
+ {
+  "army": "murderband",
+  "kind": "tests",
+  "where": "verify/import-test.js 6, verify/sources/README.md",
+  "judgement": {
+   "changes": [
+    "Cult of Blood (made up), Lord Invocatus’s Bolt pistol at BS 3+ (no known value): refused, “unit Lord Invocatus: Bolt pistol BS is changed by a rule the app cannot name: not imported” (Idols of Khorne falls back), as BS 2+ was before",
+    "Cult of Blood, BS 2+: now New Recruit’s declared value, built with GW’s 4+ and the note, no ‡ (as Blade Champion / Knight-Centura in build-parity N)",
+    "the friend’s export (import-friend/murderband.json): built at 2000 pts, the list’s marks, Bolt pistol 4+ and the note, no ‡",
+    "the ‡ path kept: the same export built with BUILD_INDEX gw without Lord Invocatus: 4+, gwx {BS:'2+'} on the row, and the note"
+   ],
+   "importFriend": "kept: the phone import of an export that is not the owner’s, and the ‡ path; README says the list is now also built in",
+   "identical": "import-test section 2: “murderband: identical to data.js (7 units) except id, source, imported” (25 of 25 exports); build-parity P1: murderband built byte for byte, the kept export made on the phone is the app’s list; P2 renders it at 390 and 320px as the built-in list"
+  },
+  "source": {
+   "files": [
+    "verify/import-test.js",
+    "verify/sources/README.md"
+   ]
+  },
+  "key": "murderband|tests"
+ },
+ {
+  "army": "murderband",
+  "kind": "housekeeping",
+  "where": "murderband: added and regenerated files",
+  "judgement": {
+   "added": [
+    "verify/sources/nr-json/murderband.json (cmp-identical to import-friend/murderband.json)",
+    "verify/sources/hand/murderband.json",
+    "data.js ARMIES murderband (builder.js’s entry), NR_IDS (import-ids.js), BUILD_INDEX gw, GRANTS (Fire Riders’ Deep Strike), CHECKLIST, TABLE_ORDER (unit key order: warlord before upgrade, tables.js)",
+    "DATASHEETS world-eaters/lord-invocatus: the list’s facts (labels of Fire Riders and Bloody Stampede, derive.js), rules order",
+    "verify/deviations-nr.json: two base entries (from-json.js)",
+    "verify/sources/nr-values.json: the Bolt pistol BS entry"
+   ],
+   "regenerated": [
+    "verify/reader2/readings2.json (reader2.js: Battle-lust and Gore-stained Veterans of Murderband’s units)",
+    "verify/provenance.json (verify/texts.js)"
+   ],
+   "unchanged": "verify/sources/waha-datasheets.txt already lists all seven datasheets",
+   "notFilled": "Jakhals · Icon of Khorne: on the Wahapedia datasheet, not in the export (the friend’s Jakhals take no icon): not shown, as builder.js gives a wargear ability only with its wargear",
+   "waiting": "snapshots: murderband.txt new; shooty.txt changed (the home screen: 27 built-in lists, Murderband in the list views); for the owner to accept at release"
+  },
+  "source": {
+   "gate": "node verify/run.js: every step passes but snapshots"
+  },
+  "key": "murderband|housekeeping"
+ }
+]

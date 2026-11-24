@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1378,
-  "sentences": 2676,
-  "read": 1368,
-  "readWithEffects": 692,
-  "readNoEffect": 676,
-  "unread": 1308,
-  "unreadOutside": 1021,
+  "sources": 1381,
+  "sentences": 2683,
+  "read": 1373,
+  "readWithEffects": 694,
+  "readNoEffect": 679,
+  "unread": 1310,
+  "unreadOutside": 1023,
   "unreadUnparsed": 287,
-  "gwFound": 2535,
+  "gwFound": 2542,
   "gwNotFound": 50,
   "gwShort": 91
  },
@@ -28598,6 +28598,181 @@
    "text": "This unit has -3\" detection range.",
    "status": "unread",
    "reason": "outside-vocabulary:engagement / detection",
+   "gw": "found"
+  },
+  "army:murderband/slaughterbound-exalted-eightbound|Battle-lust|0": {
+   "owner": "army:murderband/slaughterbound-exalted-eightbound",
+   "ownerName": "Slaughterbound",
+   "source": "Battle-lust",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "army:murderband/slaughterbound-exalted-eightbound|Battle-lust|1": {
+   "owner": "army:murderband/slaughterbound-exalted-eightbound",
+   "ownerName": "Slaughterbound",
+   "source": "Battle-lust",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "You can re-roll Charge rolls made for the bearer's unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "army:murderband/slaughterbound-exalted-eightbound|Battle-lust|2": {
+   "owner": "army:murderband/slaughterbound-exalted-eightbound",
+   "ownerName": "Slaughterbound",
+   "source": "Battle-lust",
+   "sourceKind": "unitAbility",
+   "idx": 2,
+   "text": "In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer's unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
+  "army:murderband/chaos-terminators|Gore-stained Veterans|0": {
+   "owner": "army:murderband/chaos-terminators",
+   "ownerName": "Chaos Terminators",
+   "source": "Gore-stained Veterans",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "TERMINATOR SQUAD unit only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "TERMINATOR SQUAD"
+     ]
+    },
+    "of": "unit"
+   },
+   "gw": "found"
+  },
+  "army:murderband/chaos-terminators|Gore-stained Veterans|1": {
+   "owner": "army:murderband/chaos-terminators",
+   "ownerName": "Chaos Terminators",
+   "source": "Gore-stained Veterans",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "This unit's melee attacks have +1 WS.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "skill",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "any": [
+        "TERMINATOR SQUAD"
+       ]
+      },
+      "of": "unit"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:murderband/chaos-terminators-2|Gore-stained Veterans|0": {
+   "owner": "army:murderband/chaos-terminators-2",
+   "ownerName": "Chaos Terminators",
+   "source": "Gore-stained Veterans",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "TERMINATOR SQUAD unit only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "TERMINATOR SQUAD"
+     ]
+    },
+    "of": "unit"
+   },
+   "gw": "found"
+  },
+  "army:murderband/chaos-terminators-2|Gore-stained Veterans|1": {
+   "owner": "army:murderband/chaos-terminators-2",
+   "ownerName": "Chaos Terminators",
+   "source": "Gore-stained Veterans",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "This unit's melee attacks have +1 WS.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "skill",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "any": [
+        "TERMINATOR SQUAD"
+       ]
+      },
+      "of": "unit"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "faction:orks|Waaagh!|0": {

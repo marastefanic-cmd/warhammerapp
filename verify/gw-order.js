@@ -134,7 +134,10 @@ function wahaSectionsOf(page, WW, opts) {
       // (a box of named abilities, each "**Name (tag):** text": its parts, for an ability of the datasheet that selects one of them, below)
       const NAMED = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/;
       const subs = tl.length && tl.every(l => NAMED.test(l)) ? tl.map(l => { const m = NAMED.exec(l); return { name: m[1].trim(), tag: m[2] || null, lines: [m[3]], box: true, group: nmTc }; }) : null;
-      out.abilities.push({ name: nmTc, tag: null, lines: tl, box: true, subs });
+      // (and its parts with their own lines after the first, its bullets, for an ability that selects "one <box> ability" (below):
+      // Angron's WRATHFUL PRESENCE, Driven by Ultimate Rage's "… melee attacks can:" and its two "- Re-roll …")
+      const subsOwn = !subs && tl.length && NAMED.test(tl[0]) ? tl.reduce((o, l) => { const m = NAMED.exec(l); if (m) o.push({ name: m[1].trim(), tag: m[2] || null, lines: [m[3]], box: true, group: nmTc }); else o[o.length - 1].lines.push(l); return o; }, []) : null;
+      out.abilities.push(Object.assign({ name: nmTc, tag: null, lines: tl, box: true, subs }, subsOwn ? { subsOwn } : {}));
     }
     // DAMAGED: the box "DAMAGED: 1-7 WOUNDS REMAINING" and its text: the ability BSData names "Damaged: 1-7 wounds remaining"
     const dmg = /^DAMAGED: (\S+) WOUNDS REMAINING$/.exec(t);
@@ -149,14 +152,21 @@ function wahaSectionsOf(page, WW, opts) {
   // Slaanesh section": Fulgrim's DAEMON PRIMARCH OF SLAANESH): each is an ability of its own, the box's name its group (a box no ability
   // selects from stays one ability: the Daemon Prince of Chaos's Daemonic Allegiance)
   // (or "select one Triarch ability": The Silent King's TRIARCH ABILITIES)
-  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && selectsFrom(x.text, a.name)) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
+  // (or "select one Wrathful Presence ability": Angron's WRATHFUL PRESENCE, a box not named "… Abilities", its parts with their own lines)
+  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && selectsFrom(x.text, a.name)) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() }))
+    : a.subsOwn && out.abilities.some(x => !x.box && selectsOne(x.text, a.name)) ? a.subsOwn.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
+  for (const a of out.abilities) delete a.subsOwn;
   if (!(opts && opts.subs)) for (const a of out.abilities) delete a.subs;
   return out;
 }
 // an ability's words that select one of the abilities of a box: "select one of the abilities in the <box> section", or "select one
-// <box less "Abilities"> ability" (The Silent King: "select one Triarch ability (see left)" of the TRIARCH ABILITIES box)
+// <box less "Abilities"> ability" (The Silent King: "select one Triarch ability (see left)" of the TRIARCH ABILITIES box), or "select one
+// <box> ability" (Angron's WRATHFUL PRESENCE)
 const selectsFrom = (text, box) => { const t = String(text).replace(/\*\*/g, ''), b = box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t)); };
+  return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t))
+    || selectsOne(text, box); };
+// "select one <box> ability" of a box not named "… Abilities" (Angron: "select one Wrathful Presence ability" of WRATHFUL PRESENCE)
+const selectsOne = (text, box) => !/ abilities$/i.test(box) && new RegExp('select one ' + box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ' ability\\b', 'i').test(String(text).replace(/\*\*/g, ''));
 module.exports = function make(ROOT) {
   const DIR = path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha/ds');
   const FJ = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8')); } catch (e) { return {}; } })();

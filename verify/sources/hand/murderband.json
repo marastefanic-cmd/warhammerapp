@@ -1,0 +1,7 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for murderband, written by hand and read by it on every run (from-json.js --write gives the same data.js again). Murderband is a friend’s list, not the owner’s: their New Recruit JSON export (verify/sources/nr-json/murderband.json, byte for byte the file the owner sent, also kept as the phone-import fixture verify/sources/import-friend/murderband.json). World Eaters has a faction catalogue, so the list’s entry is builder.js’s (WH_BUILDER.build) from the export and data.js’s tables; this file holds only its source line, with its reason.",
+ "source": {
+  "text": "New Recruit, exported by 23 Nov 2026 (JSON): a friend’s list",
+  "why": "the friend’s New Recruit JSON export, which the owner sent; the export carries no date (its roster has no date field: only name, id, costs, costLimits, forces and New Recruit’s generatedBy and game system), and no upload stamp of it was recorded, so the earliest day it is known to exist is the day it was committed to this repository (7601876, 23 Nov 2026, as verify/sources/import-friend/murderband.json): exported on or before that day. The line starts “New Recruit, exported ” as every list’s does (the app reads its date; verify/import-test.js and verify/build-parity.js set that line aside)"
+ }
+}

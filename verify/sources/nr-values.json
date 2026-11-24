@@ -1,5 +1,5 @@
 {
- "_about": "Values New Recruit prints otherwise than GW's datasheet, for catalogued datasheets no committed export or PDF of the owner's shows (those it does show are in verify/deviations-nr.json). An import that shows New Recruit's value here is built with GW's value and a note naming both (the owner's standing decision, as for points); any other unexplained value is refused. gw: GW's value, which must be the DATASHEETS row's (verify/build-index.js fails otherwise; verify/numbers.js holds the row to the Wahapedia datasheet page). nr: New Recruit's value, recorded before 22 Nov 2026 from New Recruit's data (once verify/deviations-bsdata.json, army catalog); it cannot be re-checked until an export of the owner's shows the datasheet, and an entry whose nr an export contradicts should be corrected from that export.",
+ "_about": "Values New Recruit prints otherwise than GW's datasheet, for catalogued datasheets no committed export or PDF of the owner's shows (those it does show are in verify/deviations-nr.json). An import that shows New Recruit's value here is built with GW's value and a note naming both (the owner's standing decision, as for points); any other unexplained value is refused. gw: GW's value, which must be the DATASHEETS row's (verify/build-index.js fails otherwise; verify/numbers.js holds the row to the Wahapedia datasheet page). nr: New Recruit's value, recorded before 22 Nov 2026 from New Recruit's data (once verify/deviations-bsdata.json, army catalog); it cannot be re-checked until an export of the owner's shows the datasheet, and an entry whose nr an export contradicts should be corrected from that export. One entry comes from an export that is not the owner’s: Lord Invocatus’s Bolt pistol BS, as the friend’s Murderband export prints it (verify/sources/nr-json/murderband.json); verify/nr.js checks an export-only list’s base sizes only, so a value of it is recorded here, with the export as its evidence.",
  "values": [
   {
    "datasheet": "adeptus-custodes/blade-champion",
@@ -73,6 +73,16 @@
    "gw": "-3",
    "nr": "-4",
    "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: RANGED WEAPONS Arachnus magna-blaze cannon AP -3"
+  },
+  {
+   "datasheet": "world-eaters/lord-invocatus",
+   "kind": "ranged",
+   "row": "Bolt pistol",
+   "field": "BS",
+   "gw": "4+",
+   "nr": "2+",
+   "evidence": "verify/.cache/waha/ds/world-eaters_Lord-Invocatus.html: RANGED WEAPONS Bolt pistol [PISTOL] 12\" A 1 BS 4+ S 5 AP -1 D 1; verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 271-273 (Datasheets, Change the following weapon characteristics): Bolt Pistol S5 AP -1, Khorne Berzerkers, Lord Invocatus, Master of Executions (no BS change); verify/sources/nr-json/murderband.json (the friend’s Murderband export, catalogue revision 17): Lord Invocatus, Bolt pistol 12\" 1 2+ 5 -1 1 Pistol",
+   "reason": "New Recruit prints BS 2+; GW’s datasheet gives 4+ and GW’s World Eaters Faction Pack changes this Bolt Pistol’s S (5) and AP (-1) only. GW wins: the app has 4+, and an export showing 2+ is New Recruit’s own value, no rule at work."
   }
  ]
 }

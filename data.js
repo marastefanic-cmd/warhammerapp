@@ -5867,6 +5867,137 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'murderband', name:'Murderband', faction:'world-eaters', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['berzerker-warband','butchers-of-khorne'],
+  source:'New Recruit, exported by 23 Nov 2026 (JSON): a friend’s list',
+  units:[
+    {
+      id:'angron', ds:'world-eaters/angron', pts:330, warlord:true,
+      models:['1× Angron'],
+      gear:[['Samni’arius and Spinegrinder']],
+      melee:[
+        { name:'strike', A:'9', from:{ A:'Relentless Rage' } },
+        { name:'sweep', A:'17', from:{ A:'Relentless Rage' } }
+      ],
+      kw:['Monster','Character','Fly','Epic Hero','Chaos','Khorne','Daemon','Primarch','Angron','Faction: World Eaters','Warlord'],
+      why:{ kw:{ Warlord:'Warlord' } }
+    },
+    {
+      id:'lord-invocatus', ds:'world-eaters/lord-invocatus', pts:100,
+      models:['1× Lord Invocatus'],
+      gear:[['Bladed horn','Bolt pistol','Coward’s Bane']],
+      melee:[
+        { name:'Coward’s Bane', A:'8', from:{ A:'Relentless Rage' } },
+        { name:'Bladed horn', A:'5', from:{ A:'Relentless Rage' } }
+      ],
+      abilities:[
+        { name:'Fire Riders' },
+        { name:'Bloody Stampede' }
+      ]
+    },
+    {
+      id:'slaughterbound-exalted-eightbound', ds:['world-eaters/slaughterbound','world-eaters/exalted-eightbound'], pts:240, ptsNote:'110 + Exalted Eightbound 130', enhancement:'Battle-lust',
+      leads:'Exalted Eightbound',
+      models:['1× Slaughterbound','1× Exalted Eightbound Champion','2× Exalted Eightbound'],
+      gear:[['Lacerator and daemonic claw'],['Chainblades'],['Chainblades']],
+      stats:[
+        { name:'Slaughterbound' },
+        { name:'Exalted Eightbound ×3' }
+      ],
+      melee:[
+        { name:'Lacerator and daemonic claw', who:'Slaughterbound', A:'7', from:{ A:'Relentless Rage' } },
+        { name:'Chainblades', who:'Exalted Eightbound', n:3, A:'5', from:{ A:'Relentless Rage' } }
+      ],
+      abilities:[
+        { name:'Lord of the Eightbound', who:'Slaughterbound' },
+        { name:'Rage Eternal', who:'Slaughterbound' },
+        { name:'Possessed Lord', who:'Slaughterbound' },
+        { name:'Battle-lust', who:'Slaughterbound', tag:'Enhancement', ph:['charge'], turn:'either', text:'**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.' },
+        { name:'Rend and Tear', who:'Exalted Eightbound' }
+      ],
+      rules:['Deadly Demise D3','Leader','Deep Strike','Blessings of Khorne','Scouts 6"','Anti'],
+      kw:['Infantry','Character','Chaos','Khorne','Daemon','Possessed','Slaughterbound','Exalted Eightbound','Faction: World Eaters'],
+      kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
+      partialRules:{ 'Deadly Demise D3':'Slaughterbound', 'Scouts 6"':'Slaughterbound' },
+      why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
+    },
+    {
+      id:'chaos-terminators', ds:'world-eaters/chaos-terminators', pts:370, copies:2, upgrade:'Gore-stained Veterans',
+      models:['1× Terminator Champion','5× Combi-bolter, power fist','2× Paired accursed weapons','2× Heavy weapon'],
+      gear:[['Combi-bolter','Power fist'],['Combi-bolter','Power fist'],['Paired accursed weapons'],['Reaper autocannon','Chainfist']],
+      stats:[
+        { name:'Chaos Terminators ×10' }
+      ],
+      ranged:[
+        { name:'Combi-bolter', n:6 },
+        { name:'Reaper autocannon', n:2 }
+      ],
+      melee:[
+        { name:'Chainfist', n:2, A:'4', WS:'3+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } },
+        { name:'Paired accursed weapons', n:2, A:'6', WS:'2+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } },
+        { name:'Power fist', n:6, A:'4', WS:'2+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } }
+      ],
+      abilities:[
+        { name:'Bloody Fury' },
+        { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
+      ]
+    },
+    {
+      id:'chaos-terminators-2', ds:'world-eaters/chaos-terminators', pts:380, upgrade:'Gore-stained Veterans',
+      models:['1× Terminator Champion','5× Combi-bolter, power fist','2× Paired accursed weapons','2× Heavy weapon'],
+      gear:[['Combi-bolter','Power fist'],['Combi-bolter','Power fist'],['Paired accursed weapons'],['Reaper autocannon','Chainfist']],
+      stats:[
+        { name:'Chaos Terminators ×10' }
+      ],
+      ranged:[
+        { name:'Combi-bolter', n:6 },
+        { name:'Reaper autocannon', n:2 }
+      ],
+      melee:[
+        { name:'Chainfist', n:2, A:'4', WS:'3+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } },
+        { name:'Paired accursed weapons', n:2, A:'6', WS:'2+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } },
+        { name:'Power fist', n:6, A:'4', WS:'2+', from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } }
+      ],
+      abilities:[
+        { name:'Bloody Fury' },
+        { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
+      ]
+    },
+    {
+      id:'jakhals', ds:'world-eaters/jakhals', pts:65,
+      models:['1× Jakhal Pack Leader','1× Dishonoured w/ paired manglers','8× Jakhal'],
+      gear:[['Autopistol','Chainblades'],['Paired manglers'],['Autopistol','Chainblades']],
+      stats:[
+        { name:'Jakhal ×9' },
+        { name:'Dishonoured w/ paired manglers' }
+      ],
+      ranged:[
+        { name:'Autopistol', n:9 }
+      ],
+      melee:[
+        { name:'Chainblades', n:9, A:'4', from:{ A:'Relentless Rage' } },
+        { name:'Paired manglers', A:'5', from:{ A:'Relentless Rage' } }
+      ],
+      abilities:[
+        { name:'Objective Ravaged' }
+      ]
+    },
+    {
+      id:'forgefiend', ds:'world-eaters/forgefiend', pts:145,
+      models:['1× Forgefiend'],
+      gear:[['Hades autocannon','Hades autocannon','Ectoplasma cannon','Forgefiend claws']],
+      ranged:[
+        { name:'Ectoplasma cannon' },
+        { name:'Hades autocannon', n:2 }
+      ],
+      melee:[
+        { name:'Forgefiend claws', A:'7', from:{ A:'Relentless Rage' } }
+      ]
+    }
+  ]
+},
 ];
 
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
@@ -6724,15 +6855,15 @@ const DATASHEETS = {
     { name:'Bolt pistol', range:'12"', A:'1', BS:'4+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
   ],
   melee:[
-    { name:'Coward’s Bane', range:'Melee', A:'7', WS:'2+', S:'6', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS'] },
-    { name:'Bladed horn', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','LANCE'] }
+    { name:'Coward’s Bane', range:'Melee', WS:'2+', S:'6', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS'], A:'7' },
+    { name:'Bladed horn', range:'Melee', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','LANCE'], A:'4' }
   ],
   abilities:[
-    { name:'Fire Riders', text:'While this model is leading a unit, models in that unit have the **Deep Strike** ability and each time a model in that unit makes a **Normal**, **Advance**, Fall Back or **Charge move**, it can move horizontally through models and **terrain features**. When making a Normal, Advance or Fall Back move, models in that unit can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed.' },
-    { name:'Bloody Stampede', text:'Each time this model’s unit ends a **Charge move**, select one enemy unit within **Engagement Range** of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 **mortal wound**; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.' },
+    { name:'Fire Riders', ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'While this model is leading a unit, models in that unit have the **Deep Strike** ability and each time a model in that unit makes a **Normal**, **Advance**, Fall Back or **Charge move**, it can move horizontally through models and **terrain features**. When making a Normal, Advance or Fall Back move, models in that unit can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed.' },
+    { name:'Bloody Stampede', ph:['charge'], turn:'either', text:'Each time this model’s unit ends a **Charge move**, select one enemy unit within **Engagement Range** of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 **mortal wound**; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.' },
     { name:'Leader', text:'This model can be attached to the following units: EIGHTBOUND, EXALTED EIGHTBOUND, KHORNE BERZERKERS' }
   ],
-  rules:['Leader','Deep Strike','Scouts 6"','Blessings of Khorne','Pistol','Devastating Wounds','Extra Attacks','Lance'],
+  rules:['Leader','Deep Strike','Scouts 6"','Blessings of Khorne','Extra Attacks','Lance','Pistol','Devastating Wounds'],
   kw:['Mounted','Character','Epic Hero','Chaos','Khorne','Lord Invocatus','Faction: World Eaters'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:100 }] }] },
   composition:[
@@ -12720,6 +12851,13 @@ const NR_IDS = {
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion":["c251-bd54-441-4799|1×190d-7321-6e85-5251,1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangor-shaman-tzaangor-enlightened-flowing-flesh":["c251-bd54-441-4799|1×1a98-844f-f54b-f76c,1×4287-4c82-30d5-bfaa,1×c84c-683a-79be-1620","1703-3edd-5eb3-fcef|1×7ebd-c3dc-8467-70ae,1×7ebd-c3dc-8467-70ae/7b4e-03d3-6b3f-6c48,5×996-bd56-400b-a51e,5×996-bd56-400b-a51e/7b4e-03d3-6b3f-6c48"],
     "mucho-mutantes/tzaangors":["f5b9-50c8-5c60-d8ea|1×255b-146d-ca61-55fb,1×255b-146d-ca61-55fb/ee84-120d-a66b-0b72,9×5b9-7d59-48fd-b485,9×5b9-7d59-48fd-b485/a484-6a41-3648-bce1"],
+    "murderband/angron":["f4b8-1179-de57-4d69|1×3f1f-49de-78f6-e59e,1×9754-481c-c292-a1f9"],
+    "murderband/chaos-terminators":["45f6-8429-a1d9-2a51|2×10f6-ffca-ae38-250e,2×10f6-ffca-ae38-250e/32bc-0724-a7cf-f17c,2×5f1f-f3bb-d6dd-6714,2×5f1f-f3bb-d6dd-6714/d2a3-be7e-4ec8-f9f6,2×5f1f-f3bb-d6dd-6714/f0b2-e942-6896-6acf,1×723d-aaaa-3268-09e3,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e/2d4d-9623-1cea-b73a,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e/a1b4-80b4-e85e-96ec,5×782f-6bfe-7238-960a,5×782f-6bfe-7238-960a/2d4d-9623-1cea-b73a,5×782f-6bfe-7238-960a/a1b4-80b4-e85e-96ec,1×ebfb-d2a4-5280-a6e6"],
+    "murderband/chaos-terminators-2":["45f6-8429-a1d9-2a51|2×10f6-ffca-ae38-250e,2×10f6-ffca-ae38-250e/32bc-0724-a7cf-f17c,2×5f1f-f3bb-d6dd-6714,2×5f1f-f3bb-d6dd-6714/d2a3-be7e-4ec8-f9f6,2×5f1f-f3bb-d6dd-6714/f0b2-e942-6896-6acf,1×723d-aaaa-3268-09e3,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e/2d4d-9623-1cea-b73a,1×723d-aaaa-3268-09e3/0984-2ae1-939b-1d1e/a1b4-80b4-e85e-96ec,5×782f-6bfe-7238-960a,5×782f-6bfe-7238-960a/2d4d-9623-1cea-b73a,5×782f-6bfe-7238-960a/a1b4-80b4-e85e-96ec,1×ebfb-d2a4-5280-a6e6"],
+    "murderband/forgefiend":["81e1-b212-69c1-308f|1×54ca-fec8-f0c6-2c77,1×54ca-fec8-f0c6-2c77/4b2a-4860-aed5-56b6,1×54ca-fec8-f0c6-2c77/a58b-974d-14a0-ece2,1×d877-3dd3-2d5a-e092,2×d877-3dd3-2d5a-e092/a343-07e9-e8f9-67f2"],
+    "murderband/jakhals":["6f81-4538-a414-251e|1×307d-0ce0-fcf0-9100,1×307d-0ce0-fcf0-9100/88ee-2f6b-0b00-0852,1×47af-ef6b-9d50-2c4a,1×47af-ef6b-9d50-2c4a/cde4-4b0b-0fa4-766e,1×47af-ef6b-9d50-2c4a/f70d-d0cb-5cb8-3be9,1×a93b-d0d4-9bfe-40c3,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/cde4-4b0b-0fa4-766e,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/f70d-d0cb-5cb8-3be9"],
+    "murderband/lord-invocatus":["3b15-b424-2059-71fa|1×9513-0551-c14b-aa72,1×ce5b-231f-75d2-7b53,1×e702-66b4-58f7-d28a"],
+    "murderband/slaughterbound-exalted-eightbound":["71c9-b10b-b55f-483e|1×33e2-4ee8-2e10-3e47,1×a085-ae61-1810-46d0","9932-3d2b-1e47-d53b|2×8719-8732-d0be-c527,2×8719-8732-d0be-c527/2307-58f3-bfa0-52a1,1×d009-9bd9-59a1-9119,1×d009-9bd9-59a1-9119/217a-9e22-3821-27e9"],
     "navigator-sounds-op-ngl/cerastus-knight-atrapos":["37a7-d156-1e4c-8fe1|1×406-60ac-f728-9c6d,1×73e9-498e-2d97-e18,1×ad65-d3cb-c677-7cb3,1×cc5a-e1bc-3dd8-f367"],
     "navigator-sounds-op-ngl/knight-crusader":["1e27-a6de-3840-a050|1×273-38fa-249e-3aa4,1×288c-1cbc-8340-9c0a,1×441c-a2a8-59a4-85a4,1×4fc1-2679-a110-3cd,1×a05e-db63-84ad-4c5e,1×a05e-db63-84ad-4c5e/d6c0-4d42-c3c4-db8a,1×a05e-db63-84ad-4c5e/eedf-6059-a15-3c86,1×ca02-db54-10e6-f20e,1×e584-f803-7858-05bc"],
     "navigator-sounds-op-ngl/knight-defender":["f12b-ca2a-9c87-79bb|1×288c-1cbc-8340-9c0a,1×615e-5655-130f-d14a,1×6bdb-2665-95ec-fcde,1×d956-a7af-5c96-2577,1×dbc9-8e4f-edf0-f9d6"],
@@ -12874,6 +13012,7 @@ const NR_IDS = {
     "379b-d6a0-cd05-ef89":"necrons/royal-warden",
     "37a7-d156-1e4c-8fe1":"imperial-knights/cerastus-knight-atrapos",
     "390e-706b-a059-378b":"ultramarines/deathwatch-terminator-squad",
+    "3b15-b424-2059-71fa":"world-eaters/lord-invocatus",
     "3b2-8c11-616a-1005":"orks/mek",
     "3bfa-bf00-b5ed-cc81":"thousand-sons/ahriman",
     "3dfb-3b2a-94b-2fbe":"chaos-space-marines/chaos-predator-destructor",
@@ -13025,6 +13164,7 @@ const NR_IDS = {
     "07b7-836e-524b-7227":"Gork's Klaw",
     "081d-bc07-5d4e-ab22":"Priority Assets",
     "0955-1e48-ac34-156f":"Moonchewa",
+    "0984-2ae1-939b-1d1e":"Combi-bolter, power fist",
     "0985-28ae-cf24-2fba":"Butchers of Khorne",
     "09b2-b286-7608-d613":"Brute Bosses",
     "0b63-2988-ec78-7913":"Daemonbreath spear",
@@ -13189,6 +13329,7 @@ const NR_IDS = {
     "3a9a-05a5-41e6-7e70":"Ceramite Fists",
     "3add-49b6-5cd3-586f":"Bolt pistol",
     "3b0d-dccf-8661-be1c":"Detachment",
+    "3b15-b424-2059-71fa":"Lord Invocatus",
     "3b2-8c11-616a-1005":"Mek",
     "3b81-de3e-f72c-b208":"Reconnaissance",
     "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
@@ -13542,6 +13683,7 @@ const NR_IDS = {
     "946c-d784-c8be-f21":"Havocs",
     "94b3-ef7f-f71f-c86e":"Castellan Axe",
     "9508-a2b1-713f-cf7b":"Code Chivalric",
+    "9513-0551-c14b-aa72":"Coward's Bane",
     "952c-7df4-87e1-6303":"Accursed crozius",
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
     "9707-82cf-9501-fb43":"Gitstikka",
@@ -13737,6 +13879,7 @@ const NR_IDS = {
     "ce45-db08-3795-18a9":"Zodgrod Wortsnagga",
     "ce4a-6df3-3c24-621b":"Bolt pistol",
     "ce51-41ab-fe5d-2402":"Staff of Tomorrow",
+    "ce5b-231f-75d2-7b53":"Bladed horn",
     "ce61-585b-aea7-18fc":"Kombi-weapon",
     "ceab-62d9-31bf-7c61":"Warlord",
     "cf57-33c7-551b-fa36":"2 ectoplasma cannons",
@@ -13813,6 +13956,7 @@ const NR_IDS = {
     "e4f0-79-126a-ac41":"Hellblade",
     "e584-f803-7858-05bc":"Hunter's Eye",
     "e687-6d7a-bb28-dcaa":"Chaos Vindicator",
+    "e702-66b4-58f7-d28a":"Bolt pistol",
     "e7b8-aa40-6da7-778e":"Pink Horrors",
     "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
     "e806-3c87-d3d5-e71d":"Flamer tendril",
@@ -13919,6 +14063,7 @@ const NR_IDS = {
     "35da-aa05-fc7f-9b1d":1,
     "3811-a215-d4a1-d197":1,
     "3924-3f8-745d-7097":1,
+    "3b15-b424-2059-71fa":1,
     "3bfa-bf00-b5ed-cc81":1,
     "42e1-e706-eb89-6cb6":1,
     "44f2-27ca-fad5-70ad":1,
@@ -14127,6 +14272,7 @@ const CHECKLIST = {
   "a|1ls4r72":{"u":"shooting:your,fight:either"},
   "a|1lx0g6o":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Invocation of Machine Vengeance","t":"command:your","u":"shooting:your,fight:either","s":1},{"n":"Mantra of Discipline"},{"n":"Binharic Courage (Aura)"},{"n":"Shroudpsalm (Aura)","u":"shooting:opp"}],"g":[{"name":"Stealth","to":{"all":["Faction: Adeptus Mechanicus"]},"opt":"Shroudpsalm (Aura)","while":"Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model"}]},
   "a|1m3sbur":{"u":"fight:either"},
+  "a|1m6ophv":{"u":"charge:either"},
   "a|1md9ojx":{"t":"shooting:opp","u":"shooting:opp"},
   "a|1mkrij5":{"u":"shooting:opp,fight:either"},
   "a|1mlxswk":{"none":1},
@@ -14399,6 +14545,7 @@ const CHECKLIST = {
   "a|x84y11":{"x":1},
   "a|xcn2sk":{"u":"charge:either"},
   "a|xebbb5":{"t":"command:your","u":"shooting:opp,fight:either","s":1,"g":[{"name":"Feel No Pain 5+","to":{"all":["Faction: Adeptus Mechanicus","Vehicle"]},"while":"In your Command phase"}]},
+  "a|xf15rm":{"u":"movement:your,charge:either"},
   "a|xnxjm5":{"u":"fight:either"},
   "a|xoco9k":{"t":"movement:your","s":1},
   "a|xt1xvf":{"t":"command:your","s":1},
@@ -15911,7 +16058,8 @@ const BUILD_INDEX = {
     "adeptus-custodes/prosecutor-squad":{"melee|Gun Stock|A":"3"},
     "adeptus-custodes/venatari-with-kinetic-destroyers":{"stats|Venatari|Ld":"6+"},
     "adeptus-custodes/venatari-with-verutum-lances":{"stats|Venatari|Ld":"6+"},
-    "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"}
+    "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"},
+    "world-eaters/lord-invocatus":{"ranged|Bolt pistol|BS":"2+"}
   },
   battleSizes:{
     "Incursion":{"points":1000,"dp":2,"enhancements":2,"units":2},
@@ -16112,13 +16260,14 @@ const GRANTS = [
   { rule:'simple-but-effective · Ghazghkull Thraka · Da Grand Warlord’s Ladz', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
   { rule:'simple-but-effective · Mozrog Skragbad · Beast Snagga Following', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
   { rule:'simple-but-effective · Nazdreg · Nazdreg’s Know-wotz', grants:'Deep Strike', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Deep Strike**.' },
-  { rule:'simple-but-effective · Beastboss on Squigosaur · Boss of da Hunt', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' }
+  { rule:'simple-but-effective · Beastboss on Squigosaur · Boss of da Hunt', grants:'Lone Operative', type:'ability', to:'this unit / model', while:'While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+  { rule:'murderband · Lord Invocatus · Fire Riders', grants:'Deep Strike', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, models in that unit have the **Deep Strike** ability and each time a model in that unit makes a **Normal**, **Advance**, Fall Back or **Charge move**, it can move horizontally through models and **terrain features**.' }
 ];
 // ---- end of RULE_OPTIONS, GRANTS ----
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','ref','leads','also','support','models','gear','stats','ranged','melee','abilities','rules','kw','kwNote','kwOnly','partialRules','srcNote'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','warlord','upgrade','ref','leads','also','support','models','gear','stats','ranged','melee','abilities','rules','kw','kwNote','kwOnly','partialRules','srcNote'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','printed','from','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],

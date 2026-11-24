@@ -13856,6 +13856,27 @@
    "sha256": null
   },
   {
+   "item": "murderband / slaughterbound-exalted-eightbound / ability:Battle-lust",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Battle-lust (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "murderband / chaos-terminators / ability:Gore-stained Veterans",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gore-stained Veterans (Butchers of Khorne) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "murderband / chaos-terminators-2 / ability:Gore-stained Veterans",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gore-stained Veterans (Butchers of Khorne) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kharn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -14274,6 +14295,34 @@
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p21, Rules Updates: DATASHEETS / Von Ryan's Leapers, Pouncing Leap ability",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "murderband / angron / ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "field": "ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Angron, Driven by Ultimate Rage Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "murderband / slaughterbound-exalted-eightbound / ability:Rend and Tear (Exalted Eightbound)",
+   "field": "ability:Rend and Tear (Exalted Eightbound)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Exalted Eightbound, Rend and Tear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "murderband / chaos-terminators / ability:Bloody Fury",
+   "field": "ability:Bloody Fury",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Chaos Terminators, Blood Fury Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "murderband / chaos-terminators-2 / ability:Bloody Fury",
+   "field": "ability:Bloody Fury",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Chaos Terminators, Blood Fury Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
   },
   {
    "item": "catalog / world-eaters/helbrute / ability:Frenzy",

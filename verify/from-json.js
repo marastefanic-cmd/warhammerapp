@@ -1545,8 +1545,9 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       { const A0u = ((D.armies.find(x => x.id === armyId) || {}).units || []).find(x => x.id === u.id);
         if (!a && A0u && !(A0u.abilities || []).some(y => y.name === sa.name)) { note('ability ' + sa.name + ' (this list does not show it, not carried)', 'on the row', 'not in this reading'); continue; } }
       // (GW's name and words, where this reading has them from GW's datasheet and the row has others, BSData's: GW's, for the row too;
-      // markup alone, ** **, keeps the row's)
-      const gwName = a && a._gw && a.name !== sa.name, gwText = a && a._gw && a.text !== undefined && String(a.text).replace(/\*\*/g, '') !== String(sa.text || '').replace(/\*\*/g, '');
+      // markup alone keeps the row's: GW's markup normalisation, as verify/words.js compares (bold, "- " bullets, line breaks, a
+      // typographic hyphen; Bloody Fury's bullets, Driven by Ultimate Rage's "Re‐roll **hit rolls**"))
+      const gwName = a && a._gw && a.name !== sa.name, gwText = a && a._gw && a.text !== undefined && GWO.norm(a.text) !== GWO.norm(sa.text || '');
       for (const k of new Set(Object.keys(sa).concat(a ? Object.keys(a) : []))) {
         if (k === 'name' || k === 'who' || k.startsWith('_') || (k === 'text' && gwText)) continue;
         // (labels and When targeted lines come later in this run, from derive.js and the hand file: only a value it has is compared)
@@ -1874,8 +1875,9 @@ const abAt = it => {
   return { u, abName, ai: d.indexOf("{ name:" + lit(abName), d.indexOf('      abilities:[', us)) };
 };
 for (const it of labels) {
-  // (an ability of a datasheet row another list has: its labels are the row's, kept as they are)
-  if ((it.kind === 'ability-timing' || it.kind === 'ability-tag') && reusedAbs.has(it.where.split(' · ').slice(1).join(' · ').replace(/ #\d+$/, ''))) continue;
+  // (an ability of a datasheet row another list has: its labels are the row's, kept as they are; a unit named by its id too, "Chaos
+  // Terminators [chaos-terminators-2]", where the list has two of its name)
+  if ((it.kind === 'ability-timing' || it.kind === 'ability-tag') && reusedAbs.has(it.where.split(' · ').slice(1).join(' · ').replace(/ #\d+$/, '').replace(/^(.*?) \[[^\]]*\]( · )/, '$1$2'))) continue;
   // a timing label comes from verify/derive.js only: where its reading is not the signed-off one (verify/derive-unread.json), no label
   if (it.status === 'unread') { filled.push({ what: 'no timing label ' + it.where, from: 'not read by the program (verify/derive-unread.json): it reads ' + JSON.stringify(it.derived) }); continue; }
   // a stratagem's needs written by hand (verify/sources/hand/<army>.json gists.<id>.needs) where derive.js reads none from its TARGET

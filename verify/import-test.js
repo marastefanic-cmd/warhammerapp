@@ -321,13 +321,20 @@ if(L('6-bigs')){
   { const prof = (sel, n, v) => { (function f(x){ for(const p0 of x.profiles || []) for(const c of p0.characteristics || []) if(c.name === n) c.$text = v; for(const y of x.selections || []) f(y); })(sel); };
     const top = (j, n) => j.roster.forces[0].selections.find(x => x.name === n), sub = (sel, re) => { let w = null; (function f(xs){ for(const x of xs || []){ if(!w && re.test(x.name)) w = x; f(x.selections); } })([sel]); return w; };
     if(fs.existsSync(path.join(MD, 'cult-of-blood-helbrute.json'))){
-      // (in a Cult of Blood list the same value is refused: Idols of Khorne, its detachment rule, has a stat box that falls back (Idol of
-      // Burning Wrath: Move, Advance and Charge; reader2 does not read it), so it could change a value; the Murderband below builds)
-      const j = M('cult-of-blood-helbrute.json'); prof(sub(top(j, 'Lord Invocatus'), /^Bolt pistol$/), 'BS', '2+');
+      // (in a Cult of Blood list a value New Recruit does not print is refused: Idols of Khorne, its detachment rule, has a stat box that
+      // falls back (Idol of Burning Wrath: Move, Advance and Charge; reader2 does not read it), so it could change a value. BS 2+, New
+      // Recruit's own value for the Bolt pistol (BUILD_INDEX gw, verify/sources/nr-values.json, since Murderband is a built-in list), is no
+      // rule at work: built with GW's 4+ and the note, as the owner's lists' declared values)
+      const j = M('cult-of-blood-helbrute.json'); prof(sub(top(j, 'Lord Invocatus'), /^Bolt pistol$/), 'BS', '3+');
       const r = mk(j);
       ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(['unit Lord Invocatus: Bolt pistol BS is changed by a rule the app cannot name: not imported']),
-        'made up: Lord Invocatus’s Bolt pistol at BS 2+ in Cult of Blood (Idols of Khorne falls back) refused: ' + JSON.stringify(r.ok ? r.army.gwValues || 'imported' : r.errors));
-      report.push('negative (made up): Lord Invocatus’s Bolt pistol at BS 2+ in Cult of Blood (Idols of Khorne has a box that falls back) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+        'made up: Lord Invocatus’s Bolt pistol at BS 3+ in Cult of Blood (Idols of Khorne falls back) refused: ' + JSON.stringify(r.ok ? r.army.gwValues || 'imported' : r.errors));
+      report.push('negative (made up): Lord Invocatus’s Bolt pistol at BS 3+ in Cult of Blood (Idols of Khorne has a box that falls back) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+      const j1 = M('cult-of-blood-helbrute.json'); prof(sub(top(j1, 'Lord Invocatus'), /^Bolt pistol$/), 'BS', '2+');
+      const r1 = mk(j1), bp1 = r1.ok && ((r1.army.units.find(u => u.id === 'lord-invocatus') || {}).ranged || []).find(w => w.name === 'Bolt pistol');
+      ok(r1.ok && bp1 && bp1.BS === '4+' && !bp1.gwx && JSON.stringify(r1.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }]),
+        'made up: Lord Invocatus’s Bolt pistol at BS 2+ (New Recruit’s, declared) in Cult of Blood: built with GW’s 4+ and the note: ' + JSON.stringify(r1.ok ? [bp1, r1.army.gwValues] : r1.errors));
+      report.push('accepted (made up): Lord Invocatus’s Bolt pistol at BS 2+ in Cult of Blood (New Recruit’s, declared) → ' + (r1.ok ? 'GW’s ' + (bp1 && bp1.BS) + ', noted: ' + (r1.army.gwValues || []).map(g => g.row + ' ' + g.field + ' ' + g.export + ' (GW ' + g.gw + ')').join('; ') : r1.errors.join('; ')));
       // a rule of the unit that sets the value (Daemonic Icon: "a Leadership characteristic of 6+") and a value it does not give: refused
       const j2 = M('cult-of-blood-helbrute.json'), bl = top(j2, 'Bloodletters');
       bl.selections.push({ id:'icon1', name:'Daemonic Icon', entryId:'madeup::Daemonic Icon', type:'upgrade', number:1, from:'entry', profiles:[{ name:'Daemonic Icon', typeName:'Abilities', characteristics:[{ name:'Description', $text:'Models in the bearer’s unit have a Leadership characteristic of 6+.' }] }] });
@@ -361,19 +368,29 @@ if(L('6-bigs')){
       report.push('negative: super terminators’ Chainfist at WS 1+ (Gore-stained Veterans gives 3+) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
     }
   }
-  // the friend's export (verify/sources/import-friend/murderband.json, New Recruit's, not a list of the owner's): built as the phone builds
-  // it, every value GW's with the list's rules (Relentless Rage's +1 A on the melee weapons, Gore-stained Veterans' +1 WS on the Chaos
-  // Terminators), and the one value New Recruit prints otherwise than GW and no rule of the list could give, Lord Invocatus's Bolt pistol
-  // at BS 2+ (GW's 4+), in the note
+  // the friend's export (verify/sources/import-friend/murderband.json, New Recruit's, not a list of the owner's; the same file is the built-in
+  // list Murderband's export, verify/sources/nr-json/murderband.json, which section 2 holds identical to it): built as the phone builds it,
+  // every value GW's with the list's rules (Relentless Rage's +1 A on the melee weapons, Gore-stained Veterans' +1 WS on the Chaos
+  // Terminators), and the one value New Recruit prints otherwise than GW, Lord Invocatus's Bolt pistol at BS 2+ (GW's 4+): declared New
+  // Recruit's own (BUILD_INDEX gw, verify/sources/nr-values.json), so GW's 4+ and the list's note, no "‡" on the row
   { const FD = path.join(ROOT, 'verify/sources/import-friend', 'murderband.json');
     if(fs.existsSync(FD)){
-      const r = mk(JSON.parse(fs.readFileSync(FD, 'utf8'))), U = id => r.ok && r.army.units.find(u => u.id === id), W = (id, n) => { const u = U(id); return u && (u.ranged || []).concat(u.melee || []).find(w => w.name === n); };
-      const inv = U('lord-invocatus'), cb = W('lord-invocatus', 'Coward’s Bane'), bh = W('lord-invocatus', 'Bladed horn'), cf = W('chaos-terminators', 'Chainfist'), jc = W('jakhals', 'Chainblades'), ec = W('slaughterbound-exalted-eightbound', 'Chainblades');
-      ok(r.ok && r.army.built && r.army.pointsUsed === 2000 && JSON.stringify(r.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }])
-        && W('lord-invocatus', 'Bolt pistol').BS === '4+' && JSON.stringify(W('lord-invocatus', 'Bolt pistol').gwx) === JSON.stringify({ BS:'2+' }) && cb.A === '8' && cb.from.A === 'Relentless Rage' && bh.A === '5' && bh.from.A === 'Relentless Rage' && cf.WS === '3+' && cf.from.WS === 'Gore-stained Veterans'
-        && jc.A === '4' && jc.S === '3' && ec.A === '5' && ec.S === '8',
-        'the friend’s Murderband: built at 2000 pts, GW’s values with its rules, Bolt pistol BS noted: ' + JSON.stringify(r.ok ? [r.army.pointsUsed, r.army.gwValues, inv && inv.ranged, cb, bh] : r.errors));
+      const FJ = JSON.parse(fs.readFileSync(FD, 'utf8')), note = [{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }];
+      const mkD = (j, d) => I.make(I.slim(j), d, { id:'local-test', date:DATE });
+      const check = (r, gwx) => { const U = id => r.ok && r.army.units.find(u => u.id === id), W = (id, n) => { const u = U(id); return u && (u.ranged || []).concat(u.melee || []).find(w => w.name === n); };
+        const bp = W('lord-invocatus', 'Bolt pistol'), cb = W('lord-invocatus', 'Coward’s Bane'), bh = W('lord-invocatus', 'Bladed horn'), cf = W('chaos-terminators', 'Chainfist'), jc = W('jakhals', 'Chainblades'), ec = W('slaughterbound-exalted-eightbound', 'Chainblades');
+        return { ok:!!(r.ok && r.army.built && r.army.pointsUsed === 2000 && JSON.stringify(r.army.gwValues) === JSON.stringify(note) && bp && bp.BS === '4+' && JSON.stringify(bp.gwx || null) === JSON.stringify(gwx)
+          && cb.A === '8' && cb.from.A === 'Relentless Rage' && bh.A === '5' && bh.from.A === 'Relentless Rage' && cf.WS === '3+' && cf.from.WS === 'Gore-stained Veterans' && jc.A === '4' && jc.S === '3' && ec.A === '5' && ec.S === '8'),
+          got:r.ok ? [r.army.pointsUsed, r.army.gwValues, bp, cb, bh] : r.errors }; };
+      const r = mk(FJ), c = check(r, null);
+      ok(c.ok, 'the friend’s Murderband: built at 2000 pts, GW’s values with its rules, Bolt pistol BS 4+ (New Recruit’s 2+ declared) in the note, no ‡: ' + JSON.stringify(c.got));
       report.push('accepted (the friend’s export): Murderband → ' + (r.ok ? r.army.units.length + ' units, ' + r.army.pointsUsed + ' pts, noted: ' + (r.army.gwValues || []).map(g => g.unit + ' ' + g.row + ' ' + g.field + ' ' + g.export + ' (GW ' + g.gw + ')').join('; ') : r.errors.join('; ')));
+      // (and the same export with that value not declared, BUILD_INDEX gw without Lord Invocatus: no rule of the list could change it
+      // (builder.js couldTouch), so it is the export's own data: GW's 4+ built, marked on the row (gwx, "‡") and said in the list's note)
+      const D2 = Object.assign({}, D, { buildIndex:Object.assign({}, D.buildIndex, { gw:Object.fromEntries(Object.entries(D.buildIndex.gw).filter(([k]) => k !== 'world-eaters/lord-invocatus')) }) });
+      const r2 = mkD(FJ, D2), c2 = check(r2, { BS:'2+' });
+      ok(D.buildIndex.gw['world-eaters/lord-invocatus'] && c2.ok, 'the friend’s Murderband with Lord Invocatus’s BS 2+ undeclared: built with GW’s 4+, the row marked ‡ (gwx) and the note: ' + JSON.stringify(c2.got));
+      report.push('accepted (the friend’s export, its BS 2+ undeclared): Murderband → ' + (r2.ok ? 'Bolt pistol gwx ' + JSON.stringify(((r2.army.units.find(u => u.id === 'lord-invocatus') || {}).ranged || []).map(w => w.gwx || null)) + ', noted: ' + (r2.army.gwValues || []).map(g => g.row + ' ' + g.field + ' ' + g.export + ' (GW ' + g.gw + ')').join('; ') : r2.errors.join('; ')));
     }
   }
   // the earlier made-up Cult of Blood list whose Helbrute swaps its multi-melta for a twin lascannon: refused while the Helbrute's options

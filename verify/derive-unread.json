@@ -918,6 +918,28 @@
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword)"
+  },
+  "ability-timing | murderband · Chaos Terminators [chaos-terminators] · Gore-stained Veterans": {
+   "of": "d6f3aa97",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
+  },
+  "ability-timing | murderband · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans": {
+   "of": "d6f3aa97",
+   "reading": {
+    "ph": [
+     "fight"
+    ],
+    "turn": "either"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
   }
  }
 }

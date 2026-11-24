@@ -275,7 +275,7 @@ Known limits: the models and wargear of a unit of the 18 lists of factions with 
 script holds their legality to GW's UNIT COMPOSITION and WARGEAR OPTIONS; the phone imports only units a committed export holds); the
 limits of a wargear choice (its minimum and maximum) on the three catalogues built before that day are New Recruit's
 as recorded then, held to GW's page by name only; a value New Recruit prints otherwise than GW's datasheet (`BUILD_INDEX.gw`: what an export or PDF of the owner's shows,
-`verify/deviations-nr.json`, and seven datasheets recorded in `verify/sources/nr-values.json`) is built with GW's value and a note
+`verify/deviations-nr.json`, and eight datasheets recorded in `verify/sources/nr-values.json`, one of them, Lord Invocatus's Bolt pistol BS, as the friend's Murderband export shows it) is built with GW's value and a note
 naming both, as for points; any other value no rule explains is refused, named.
 
 ## Faction catalogues
@@ -381,7 +381,7 @@ every list imported on the phone shows every screen as the built-in one at 390 a
 list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
 has no effect on a build; a list whose built-in entry needs a hand file (an id, a `short`, a note) would differ, and P1 says so.
 
-**One builder.** A built-in list of a catalogued faction that has a New Recruit JSON export (10 lists today: Basic Bitch, Big demons baby, Healybois, Lite Knights, Nidzillas, Princes, Standard, Super Terminators, The Exiled Legion, Tzeeeeentch) is made by the same code as a phone import; the two catalogued lists made from New
+**One builder.** A built-in list of a catalogued faction that has a New Recruit JSON export (11 lists today: Basic Bitch, Big demons baby, Healybois, Lite Knights, Murderband (a friend's list), Nidzillas, Princes, Standard, Super Terminators, The Exiled Legion, Tzeeeeentch) is made by the same code as a phone import; the two catalogued lists made from New
 Recruit PDFs alone, with no export (Emperor's Chosen and Dread Host, Adeptus Custodes), are not (see the known limits). `verify/from-json.js --write` ends
 by calling `WH_BUILDER.build` on the export with the `data.js` it has just written (after `verify/build-index.js --write`, so its "+" marks
 are in `BUILD_INDEX`), and the list's `ARMIES` entry is builder.js's, with from-json's source line (the day the export was committed, or the
@@ -389,7 +389,7 @@ hand file's `source`). What stays from-json's is the Node-only part: Wahapedia's
 documents (the datasheet facts `verify/tables.js --write` puts on `DATASHEETS`, the faction rows, the deviation files), and the hand file.
 Its own reading of the list's entry is kept as a check: where it is not builder.js's, the entry is builder.js's, the difference is listed
 and the run fails; `verify/reimport.js` (4) fails a catalogued list not built so, or built otherwise than from-json reads it. A list of a
-faction with no catalogue (14 of the 24 exports today) keeps from-json's reading until the faction's catalogue lands; the phone copies it.
+faction with no catalogue (14 of the 25 exports today) keeps from-json's reading until the faction's catalogue lands; the phone copies it.
 
 What from-json does that builder.js does not, and where each goes:
 

@@ -54,8 +54,9 @@ their pick-one markers and verify/import-nr.js their wording. The importer adds 
 list to it.
 
 ## nr-json/
-The owner's New Recruit JSON exports, one per list. They are the only source of New Recruit's ids: verify/import-ids.js writes
-data.js NR_IDS from them, and the in-app import looks a selection up by an id they have shown, else by its exact New Recruit name.
+The owner's New Recruit JSON exports, one per list, and one friend's (murderband.json, below). They are the only source of New Recruit's
+ids: verify/import-ids.js writes data.js NR_IDS from them, and the in-app import looks a selection up by an id they have shown, else by its
+exact New Recruit name.
 
 ## import-madeup/
 Made-up New Recruit-shaped exports of a catalogued faction (not the owner's lists): units, enhancements and detachments no list has,
@@ -70,9 +71,13 @@ Chaos Daemons catalogue in place of a Lord of Change, its melee AP one better th
 aura of its own could give it.
 
 ## import-friend/
-A friend's New Recruit export (Murderband, World Eaters), as their phone imported it: not a list of the owner's, so not in data.js
-ARMIES. verify/import-test.js (section 6) builds it as the phone does and holds every value to GW's datasheet with the list's rules,
-and the one value New Recruit prints otherwise (Lord Invocatus's Bolt pistol at BS 2+, GW's 4+) to GW's, said in the list's note.
+A friend's New Recruit export (Murderband, World Eaters), as their phone imported it. The list is also built in since 24 Nov 2026:
+nr-json/murderband.json is the same file byte for byte, data.js ARMIES has the list (builder.js's entry, as for the owner's catalogued
+lists; hand/murderband.json its source line), and verify/import-test.js (section 2) holds the import of it identical to that list. This
+copy keeps the case of a phone import of an export that is not the owner's: verify/import-test.js (section 6) builds it as the phone does
+and holds every value to GW's datasheet with the list's rules, and the one value New Recruit prints otherwise (Lord Invocatus's Bolt pistol
+at BS 2+, GW's 4+; declared New Recruit's own in nr-values.json) to GW's, said in the list's note; and, with that declaration taken out,
+the "‡" path: GW's value, the row marked (gwx) and the note.
 
 ## catalog/
 The faction catalogues (docs/catalog.md): the committed rows of every current datasheet of a catalogued faction. The gate step

@@ -2692,5 +2692,25 @@
   "where": "verify/sources/nr/big-demons-baby.txt p10",
   "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
   "evidence": "verify/sources/nr/big-demons-baby.txt p10: the row [\"Flesh Hounds\"]; the list’s models lines in data.js: [\"1× Gore Hound (Collar of Khorne)\", \"4× Flesh Hound (Collar of Khorne)\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "murderband",
+  "unit": "lord-invocatus",
+  "field": "stats[Lord Invocatus].base",
+  "app": "90×52.5mm Oval",
+  "source": "90x52.5mm",
+  "reason": "New Recruit’s export (catalogue revision 17) gives the base as 90x52.5mm; GW’s base size guide (Event Companion) has 90×52.5mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3894: \"Lord Invocatus  90x52.5mm Oval Base\"; verify/sources/nr-json/murderband.json: Base 90x52.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "murderband",
+  "unit": "forgefiend",
+  "field": "stats[Forgefiend].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 17) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3885: \"Forgefiend  120x92mm Oval Base\"; verify/sources/nr-json/murderband.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
  }
 ]
