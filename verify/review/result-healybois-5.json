@@ -1,0 +1,176 @@
+[
+ {
+  "key": "f6268252cde8449f",
+  "where": "ability-sumAtk · healybois · The Red Terror · Swallow Whole",
+  "verdict": "ok",
+  "why": "Owner-approved example text (docs/summaries.md \"Gaping maw: vs INFANTRY/MOUNTED/BEASTS: …; heals D3+2 per model killed\"). GW (Faction Pack Tyranids, The Red Terror) Swallow Whole is unchanged."
+ },
+ {
+  "key": "aa28911a6a85539b",
+  "where": "ability-tag · healybois · Hive Tyrant · Will of the Hive Mind",
+  "verdict": "ok",
+  "why": "Faction Pack Tyranids Rules Update, Will of the Hive Mind: \"Once per battle round, one model from your army with this ability can use it …\"."
+ },
+ {
+  "key": "fb72e7866950640e",
+  "where": "ability-tag · healybois · Hive Tyrant · Onslaught",
+  "verdict": "ok",
+  "why": "GW datasheet: Onslaught (Aura, Psychic)."
+ },
+ {
+  "key": "072a6e063b9aa7d4",
+  "where": "ability-sumAtk · healybois · Hive Tyrant · Onslaught",
+  "verdict": "ok",
+  "why": "Faction Pack: \"While a friendly TYRANIDS unit is within 6\\\" of this model, ranged weapons … have the [ASSAULT] and [LETHAL HITS] abilities.\" This is the owner-approved example wording."
+ },
+ {
+  "key": "97e585ff613e5f98",
+  "where": "ability-sumDef · healybois · Hive Tyrant · Guardian Organism",
+  "verdict": "ok",
+  "why": "GW Tyrant Guard: \"While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.\""
+ },
+ {
+  "key": "4207b9b5c88ead95",
+  "where": "ability-sumAtk · healybois · Pyrovores · Burning Spray",
+  "verdict": "ok",
+  "why": "Unchanged from the approved Healybois text. One Pyrovores unit remains."
+ },
+ {
+  "key": "95d5aeff41ea229c",
+  "where": "ability-tag · healybois · Ripper Swarms · Chitinous Horrors",
+  "verdict": "ok",
+  "why": "GW: Chitinous Horrors (Aura)."
+ },
+ {
+  "key": "271cfac871966e8a",
+  "where": "ability-sumFoe · healybois · Ripper Swarms · Chitinous Horrors",
+  "verdict": "ok",
+  "why": "GW: \"While an enemy unit is within Engagement Range of this unit, halve the Objective Control characteristic of models in that enemy unit.\" sumFoe placement (rule 34)."
+ },
+ {
+  "key": "4053d2dd9eb771cf",
+  "where": "ability-sumAtk · healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Unchanged approved Singular Purpose text. One Assimilator remains."
+ },
+ {
+  "key": "cd112b0489b13a52",
+  "where": "ability-sumDef · healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "As above."
+ },
+ {
+  "key": "a0ac5edb1bfbf767",
+  "where": "ability-sumSt · healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "As above."
+ },
+ {
+  "key": "b3260020caae3baa",
+  "where": "ability-sumOv · healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "As above."
+ },
+ {
+  "key": "0644cc8affb188cd",
+  "where": "ability-tag · healybois · Norn Assimilator · Harpoon Barbs",
+  "verdict": "ok",
+  "why": "Unchanged approved tag."
+ },
+ {
+  "key": "476544f109997d65",
+  "where": "ability-tag · healybois · Norn Assimilator · Protean Purpose",
+  "verdict": "ok",
+  "why": "Unchanged approved tag (Talons of the Norn Queen)."
+ },
+ {
+  "key": "425ddf6d01b3a8a2",
+  "where": "ability-tag · healybois · Norn Assimilator · Synaptoprescience",
+  "verdict": "ok",
+  "why": "Synaptoprescience, 30 pts in the export and in data.js."
+ },
+ {
+  "key": "e67650cc6bb48579",
+  "where": "ability-tag · healybois · Tyrannofex · Resilient Organism",
+  "verdict": "ok",
+  "why": "GW Tyrannofex: \"Resilient Organism: Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.\""
+ },
+ {
+  "key": "10466d864db8ddee",
+  "where": "ability-sumDef · healybois · Tyrannofex · Resilient Organism",
+  "verdict": "ok",
+  "why": "Owner-approved example text."
+ },
+ {
+  "key": "2e6f8b46019dd8f0",
+  "where": "ability-sumOv · healybois · Tyrannofex · Resilient Organism",
+  "verdict": "ok",
+  "why": "Owner-approved example text."
+ },
+ {
+  "key": "2b1d13eda0155e6b",
+  "where": "points · points (healybois-5 export)",
+  "verdict": "ok",
+  "why": "GW costs (Wahapedia) match the export, each unit and the 2000 total: The Red Terror 120; Swarmlord + 6 Tyrant Guard 210 + 170; Hive Tyrant 195 + 6 Tyrant Guard 170 = 365; Biovores 60; Pyrovores (3, 1st unit) 100; Ripper Swarms (1) 30, with Spinemaws priced at nothing on GW's page; Haruspex (1st) 125; Norn Assimilator (1st) 250 + Synaptoprescience 30 = 280; Norn Emissary 250; Psychophage 110; Tyrannofex (1st) 170 + Acid spray 10 = 180."
+ },
+ {
+  "key": "ec4b32d3b5f52932",
+  "where": "unit-weapons · healybois · Hive Tyrant + Tyrant Guard",
+  "verdict": "ok",
+  "why": "The export's Tyrant Guard carry \"Scything talons and rending claws\" (GW default). The Hive Tyrant has no enhancement, so its profiles are GW's with no \"+\" marks."
+ },
+ {
+  "key": "3dff8fd681031e82",
+  "where": "unit-weapons · healybois · Ripper Swarms",
+  "verdict": "ok",
+  "why": "GW Ripper Swarms: \"All models in this unit can each be equipped with 1 spinemaws\". The Spinemaws profile (pack: 6\" A4 BS5+ S3 AP0 D1 [PISTOL]) is held under New Recruit's name Spinemaw, the gear name the export uses."
+ },
+ {
+  "key": "6f8993b989751ee4",
+  "where": "unit-weapons · healybois · Haruspex (new datasheet for the owner’s lists)",
+  "verdict": "ok",
+  "why": "GW Haruspex: UNIT COMPOSITION default loadout (grasping tongue, ravenous maw, shovelling claws), 125 pts. The base is 120×92mm Oval (Event Companion line 3817), declared. The row's values are Wahapedia's (numbers step passes)."
+ },
+ {
+  "key": "faae9727971f202d",
+  "where": "unit-weapons · healybois · Tyrannofex",
+  "verdict": "ok",
+  "why": "GW Tyrannofex: fleshborer hive replaced with 1 acid spray (WARGEAR OPTIONS); Acid spray 18\" D6+6 S6 AP-2 D2 [TORRENT]; 170 + 10 (per Acid spray). FRAME is GW's keyword (Wahapedia KEYWORDS) and New Recruit lacks it: GW's is kept. The Rupture cannon pack update does not apply (not taken)."
+ },
+ {
+  "key": "764f1b412836f5e4",
+  "where": "unit-weapons · healybois · The Red Terror",
+  "verdict": "ok",
+  "why": "Faction Pack Tyranids prints The Red Terror (M10 T8 Sv3+ W9 Ld8+ OC3; Gaping maw A1 WS2+ S5 AP- D D3+2 [EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION]; Scything talons A12 WS2+ S7 AP-2 D2; keywords incl. BURROWER, VANGUARD INVADER), and the row matches it. The carried-over judgements hold under the current pack."
+ },
+ {
+  "key": "8a2b8b47272d1dd9",
+  "where": "code · verify/build-parity.js N (healybois-5)",
+  "verdict": "ok",
+  "why": "Each negative still tests what it did.\n- Enhancement placement (non-CHARACTER, EPIC HERO, two on one unit) uses the old export's Parasitic Biomorphology selection, with the Ripper Swarms out to stay at 2000.\n- Unit limit: 3 more Pyrovores make 4.\n- The Protean Purpose expectations follow the one Assimilator.\n- \"A rule’s value more/less than it gives\" moved from Parasitic Biomorphology (+1 S on a weapon) to Synaptoprescience (InSv set to 4+): 3+ and 5+ are both refused, so \"more\" and \"less\" are still both tested, now on a set value. The additive weapon-value case stays covered by import-test (Gore-stained Veterans WS 1+), but nothing now tests \"less than an additive rule gives\".\n- Suggested, not blocking: add a \"less\" case on an additive rule (e.g. a World Eaters list's Relentless Rage A one under)."
+ },
+ {
+  "key": "dc27e85a69575b3f",
+  "where": "housekeeping · healybois-5: removed and regenerated entries",
+  "verdict": "ok",
+  "why": "Removing Parasitic Biomorphology's sumAtk is right for the lines step (LM): no list places the line, and a summary must be a line some list shows. The side effect is confirmed: the owner's own 22 Nov export (git e66098a verify/sources/nr-json/healybois.json) now fails on the phone with \"unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is changed by a rule the app cannot name: not imported\" (×3 weapons). Before, it built with +1 S marked.\n\nAcceptable for now: it is a named refusal, not a silent value. Proper fix (follow-up): keep every enhancement of a detachment the app has read readable without a list holding it. Either read the Tyranids catalogue (aiRead, as World Eaters: verify/catalog-armies.js places each enhancement on a CHARACTER its words allow, BOXES and the summary stay live, LM sees the line), or extend catalog-armies' enhancement placement to the read detachments of every catalogued faction. That would also restore phone imports of other unused enhancements."
+ },
+ {
+  "key": "e0c023f84bc6c739",
+  "where": "list-source · healybois · source line",
+  "verdict": "ok",
+  "why": "The upload (Healybois_-_2000pts_1.json) is stamped 2026-11-26 11:04 UTC. The export carries no date, so the day it was sent is the right one: \"exported 26 Nov 2026\"."
+ },
+ {
+  "key": "healybois-5|derive-agreed",
+  "where": "verify/derive-agreed.json",
+  "verdict": "ok",
+  "why": "Only the new units' 6 labels are added. The 360 --agree items it declined are other lists' labels unrelated to this change, and the derive step lists any difference without failing, so leaving them out hides nothing this branch brings. Agreeing them belongs to their own review."
+ },
+ {
+  "key": "healybois-5|declared",
+  "where": "deviations-nr bases, hand-file keyword whys",
+  "verdict": "ok",
+  "why": "Bases: Haruspex and Tyrannofex 120x92mm in the export, 120×92mm Oval in the Event Companion (lines 3817, 3857). Keywords: New Recruit lacks GW's BURROWER (Red Terror), RIPPER SWARMS (New Recruit: Ripper Swarm) and FRAME (Tyrannofex); GW's keywords are used. The keywords step passes."
+ }
+]
