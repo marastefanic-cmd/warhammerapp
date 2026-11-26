@@ -5253,6 +5253,22 @@
   },
   "ability-tag | healybois · Norn Emissary · Protean Purpose": "Once per battle, per unit",
   "ability-timing | healybois · Norn Emissary · Unnatural Resilience": {},
+  "ability-timing | healybois · The Red Terror · Subterranean Hunter": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | healybois · Haruspex · Grisly Spectacle": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | healybois · Haruspex · Damaged: 1-5 Wounds Remaining": {},
+  "ability-timing | healybois · Tyrannofex · Resilient Organism": {},
+  "ability-tag | healybois · Tyrannofex · Resilient Organism": "Once per battle",
+  "ability-timing | healybois · Tyrannofex · Damaged: 1-5 Wounds Remaining": {},
   "ability-timing | healybois · Spore Mines (Biovore) · Floating Death": {
    "ph": [
     "movement",

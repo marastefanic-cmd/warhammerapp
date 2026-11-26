@@ -218,8 +218,13 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         characteristics:[['Range', r.range], ['A', r.A], [kind === 'ranged' ? 'BS' : 'WS', kind === 'ranged' ? r.BS : r.WS], ['S', r.S], ['AP', r.AP], ['D', r.D], ['Keywords', (r.kw || []).join(', ')]].map(([n2, v]) => ({ name:n2, $text:v })) }] }; };
     const prof = (s, f) => s.profiles[0].characteristics.find(c => c.name === f);
     const takeEnh = (j, from) => { const h = unit(j, from), e = h.selections.find(s => s.group && /^Enhancements/.test(s.group)); h.selections = h.selections.filter(s => s !== e); return e; };
-    const resetS = j => { const ht = unit(j, 'Hive Tyrant'); for(const w of ht.selections.filter(s => /Monstrous/.test(s.name))){ const r = D.datasheets['tyranids/hive-tyrant'].melee.find(x => lc(x.name) === lc(w.name)); prof(w, 'S').$text = r.S; }
-      for(const tg of sels(j).filter(s => s.name === 'Tyrant Guard')) for(const w of tg.selections[0].selections) prof(w, 'S').$text = '5'; };
+    // (Parasitic Biomorphology, the selection of the healybois-4 export (git 8cba527): the healybois-5 export takes it off the Hive Tyrant,
+    // so the enhancement cases add the selection (withPB: on the Hive Tyrant))
+    const PB = { profiles:[{ characteristics:[{ $text:'**^^Tyranids^^** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer\'s unit. The first time the bearer\'s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more **^^Harvester^^** units, until the end of battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer\'s unit.', name:'Description', typeId:'9b8f-694b-e5e-b573' }], id:'68ef-4d8f-7fc-994f', name:'Parasitic Biomorphology', hidden:false, typeId:'9cc3-6d83-4dd3-9b64', typeName:'Abilities', from:'entry' }],
+      costs:[{ name:'pts', typeId:'51b2-306e-1021-d207', value:25 }, { name:'Enhancements', typeId:'f759-1bc4-cb3a-f0d2', value:1 }], id:'yt041u', name:'Parasitic Biomorphology', entryId:'d160-2a74-7d96-5e9f::ecf0-4643-c6b-6160::9785-ca88-1ecd-2d55', entryGroupId:'d160-2a74-7d96-5e9f::ecf0-4643-c6b-6160::a95f-4bb6-37ad-dae8', number:1, type:'upgrade', from:'group', group:'Enhancements::Assimilation Swarm Enhancements' };
+    // (its 25 pts: the Ripper Swarms (30) out, so the list stays within Strike Force's 2000)
+    const roomPB = j => { const s = sels(j); s.splice(s.findIndex(x => x.name === 'Ripper Swarms'), 1); j.roster.costs[0].value += 25 - 30; return j; };
+    const withPB = j => { unit(j, 'Hive Tyrant').selections.unshift(clone(PB)); return roomPB(j); };
     const lc = x => String(x).toLowerCase();
     neg('wargear: two of a one-of group', 'basic-bitch', j => { unit(j, 'Tyrannofex').selections.push(wsel('tyrannofex', 'Rupture cannon', 'ranged')); },
       ['unit Tyrannofex not imported: Tyrannofex has 2 of Rupture cannon, Fleshborer hive and Acid spray each (GW’s datasheet Tyrannofex, Fleshborer Hive: 1)']);
@@ -233,19 +238,21 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['unit Pyrovores not imported: 4 Pyrovore models (GW’s datasheet Pyrovores: 1–3)']);
     neg('models: a name the datasheet has not', 'healybois', j => { unit(j, 'Pyrovores').selections[0].name = 'Pyrovore <b>'; },
       ['model Pyrovore <b> on unit Pyrovores not recognized (GW’s datasheet Pyrovores has Pyrovore)', 'unit Pyrovores not imported: 0 Pyrovore models (GW’s datasheet Pyrovores: 1–3)']);
-    neg('a rule’s value: more than it gives', 'healybois', j => { prof(unit(j, 'Hive Tyrant').selections.find(s => /bonesword/.test(s.name)), 'S').$text = '20'; },
-      ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 20 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
-    neg('a rule’s value: less than it gives', 'healybois', j => { prof(unit(j, 'Hive Tyrant').selections.find(s => /bonesword/.test(s.name)), 'S').$text = '3'; },
-      ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 3 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
+    // (the healybois-5 export has no Parasitic Biomorphology, and no list has it: BUILD_INDEX no longer names its +1 S (verify/build-index.js
+    // takes the marks from the lists), so a value is held to a rule of the list here by Synaptoprescience's 4+ InSv)
+    neg('a rule’s value: more than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '3+'; },
+      ['unit Norn Assimilator: Norn Assimilator InSv is 3+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
+    neg('a rule’s value: less than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '5+'; },
+      ['unit Norn Assimilator: Norn Assimilator InSv is 5+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
     neg('a rule’s invulnerable save: better than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '2+'; },
       ['unit Norn Assimilator: Norn Assimilator InSv is 2+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
     // (a value the export changes next to a rule of the list that could change it: Hyper-adaptations, an army rule of every Tyranids unit,
     // has a box that falls back (AGREE): refused, never GW's value in its place; builder.js couldTouch)
     neg('a value next to a rule whose box falls back (Hyper-adaptations): refused', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
       ['unit Tyrannofex: Tyrannofex T is changed by a rule the app cannot name: not imported']);
-    neg('enhancement on a non-CHARACTER', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Pyrovores').selections.unshift(e); },
+    neg('enhancement on a non-CHARACTER', 'healybois', j => { roomPB(j); unit(j, 'Pyrovores').selections.unshift(clone(PB)); },
       ['enhancement Parasitic Biomorphology on Pyrovores not imported: only CHARACTER units can be given enhancements (Core Rules 25.04, Select Enhancements)']);
-    neg('enhancement on an EPIC HERO', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'The Swarmlord').selections.unshift(e); },
+    neg('enhancement on an EPIC HERO', 'healybois', j => { roomPB(j); unit(j, 'The Swarmlord').selections.unshift(clone(PB)); },
       ['enhancement Parasitic Biomorphology on The Swarmlord not imported: EPIC HERO models cannot be given enhancements (Core Rules 25.04, Select Enhancements)']);
     neg('enhancement its words do not allow', 'healybois', j => { const a = unit(j, 'Norn Assimilator'), e = takeEnh(j, 'Norn Assimilator');
       a.profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '-'; unit(j, 'Norn Emissary').selections.unshift(e);
@@ -253,9 +260,9 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['enhancement Synaptoprescience on Norn Emissary not imported: GW’s enhancement says “NORN ASSIMILATOR unit only.”']);
     neg('the same enhancement twice', 'basic-bitch', j => { for(const p of sels(j).filter(s => s.name === 'Tyranid Prime with Lash Whip')) p.selections.unshift({ id:'e' + p.id, name:'Adaptive Biology', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
       null, r => !r.ok && r.errors.includes('enhancement Adaptive Biology ×2 not imported: your army cannot include more than one of the same enhancement (Core Rules 25.04, Select Enhancements)'));
-    neg('two enhancements on one unit', 'healybois', j => { unit(j, 'Hive Tyrant').selections.unshift({ id:'e2', name:'Instinctive Defence', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
+    neg('two enhancements on one unit', 'healybois', j => { withPB(j); unit(j, 'Hive Tyrant').selections.unshift({ id:'e2', name:'Instinctive Defence', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
       null, r => !r.ok && r.errors.includes('unit Hive Tyrant + Tyrant Guard not imported: Instinctive Defence and Parasitic Biomorphology: no unit (including attached units) can have more than one enhancement (Core Rules 25.04)'));
-    neg('enhancement excluded by its words', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Hive Tyrant').selections.unshift({ id:'e3', name:'Regenerating Monstrosity', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
+    neg('enhancement excluded by its words', 'healybois', j => { unit(j, 'Hive Tyrant').selections.unshift({ id:'e3', name:'Regenerating Monstrosity', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
       null, r => !r.ok && r.errors.includes('enhancement Regenerating Monstrosity on Hive Tyrant not imported: GW’s enhancement says “TYRANIDS model only (excluding MONSTERS models).”'));
     // (nidzillas: Monstrous Nemesis, Synaptoprescience twice and Destabilising Predation count 3, each Upgrade once; two Neurotyrants with an
     // enhancement each make 5, over Strike Force's 4)
@@ -339,7 +346,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['warlord Pyrovores not imported: the Warlord must be a CHARACTER model (Core Rules 25.04, Select Units)']);
     neg('an EPIC HERO twice', 'healybois', j => { const s = sels(j), sw = clone(unit(j, 'The Swarmlord')); sw.id = 'sw2'; sw.selections = sw.selections.filter(x => x.name !== 'Warlord'); sw.associations = []; s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); s.push(sw); j.roster.costs[0].value += 210 - 250; },
       ['2× The Swarmlord not imported: every EPIC HERO has a unit limit of 1 (Core Rules 25.03)']);
-    neg('a datasheet over the unit limit', 'healybois', j => { const s = sels(j), p = unit(j, 'Pyrovores'); s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); for(let k = 0; k < 2; k++){ const c = clone(p); c.id = 'pp' + k; s.push(c); } j.roster.costs[0].value += 200 - 250; },
+    neg('a datasheet over the unit limit', 'healybois', j => { const s = sels(j), p = unit(j, 'Pyrovores'); s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); s.splice(s.findIndex(x => x.name === 'Norn Assimilator'), 1); for(let k = 0; k < 3; k++){ const c = clone(p); c.id = 'pp' + k; s.push(c); } j.roster.costs[0].value += 300 - 250 - 280; },
       ['4× Pyrovores not imported: Strike Force’s unit limit for Pyrovores is 3 (Core Rules 25.03)']);
     neg('Detachment Points over the battle size’s', 'healybois', j => { const nd = clone(exp('nidzillas')).roster.forces[0].selections.find(s => s.name === 'Detachment').selections.find(s => /Crusher/.test(s.name)); sels(j).find(s => s.name === 'Detachment').selections.push(nd); },
       ['detachments Assimilation Swarm, Talons of the Norn Queen and Crusher Stampede (5 DP) not imported: Strike Force has 3 DP (Core Rules 25.03, 25.04)']);
@@ -357,7 +364,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     const pp = r => r.ok ? D.resolve(r.army).units.filter(u => /^Norn /.test(u.name)).map(u => u.name + ':' + u.abilities.some(a => a.name === 'Protean Purpose')) : r.errors;
     neg('a Norn without Talons of the Norn Queen: no Protean Purpose', 'healybois', noTalons, null, r => JSON.stringify(pp(r)) === JSON.stringify(['Norn Emissary:false']));
     report.push('N a Norn without Talons of the Norn Queen → ' + JSON.stringify(pp(B.build(((j => (noTalons(j), j))(clone(exp('healybois')))), D, { id:'n', date:'x' }))));
-    ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
+    ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
     // (names compared as ruleAbilities compares them: "(Aura)", case and apostrophes aside, Deathly Terror (Aura) for the option Deathly Terror)
     const nmA = n => String(n || '').replace(/\s*\(Aura\)$/, '').replace(/[’‘]/g, "'").toLowerCase();
     const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && nmA(g.grants) === nmA(a.name) && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && nmA(o.option) === nmA(g.grants))))).map(([k]) => k);
@@ -369,10 +376,10 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     const PP = 'Higher Imperatives · Once per battle, per unit';
     const ppTag = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Protean Purpose')).map(u => u.name + ':' + u.abilities.find(a => a.name === 'Protean Purpose').tag).sort() : r.errors;
     neg('an export without the Protean Purpose profile: its Norns still have it', 'healybois', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => p.name !== 'Protean Purpose'); }); },
-      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
     neg('the Protean Purpose profile on a unit without the keyword (The Swarmlord): no row', 'healybois', j => { let pr; walkP(j.roster, x => { for(const p of x.profiles || []) if(p.name === 'Protean Purpose' && !pr) pr = p; });
         const sl = unit(j, 'The Swarmlord'); sl.profiles = (sl.profiles || []).concat([pr]); },
-      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
     // Daughters of the Abyss: Psychic Null (Aura) on Lite Knights' ANATHEMA PSYKANA units only, whatever the export prints
     const pn = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Psychic Null (Aura)' && a.tag === 'Daughters of the Abyss · Aura')).map(u => u.name).sort() : r.errors;
     const PN = ['Prosecutor Squad', 'Witchseeker Squad', 'Witchseeker Squad'];

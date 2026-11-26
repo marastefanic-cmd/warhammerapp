@@ -880,7 +880,7 @@ const FACTIONS = {
           { name:'Regenerating Monstrosity', pts:20, text:'**TYRANIDS** model only (excluding **MONSTERS** models). The bearer’s unit can be regenerated up to twice per phase, instead of once.' },
           { name:'Instinctive Defence', nr:'Instinctive Defense', pts:15, text:'**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.' },
           { name:'Biophagic Flow (Aura)', pts:10, text:'**TYRANIDS** model only. While a friendly **HARVESTER** model is within 12" of the bearer, when using the Feed the Swarm ability, that **HARVESTER** model can Regenerate one friendly **TYRANIDS** unit that is within 9" of it, instead of one within 6".' },
-          { name:'Parasitic Biomorphology', sumAtk:'The bearer’s unit: +1 S in melee; after that unit first destroys an enemy unit in the Fight phase within 6" of a HARVESTER: +1 A too for the battle', sumAtkOf:'cffd9038', pts:25, text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' }
+          { name:'Parasitic Biomorphology', pts:25, text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' }
         ],
         stratagems:[
           { id:'broodguard-impulse', gist:'after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle', gistOf:'c4da1dfa', name:'Broodguard Impulse', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Harvester'] }, when:'Any phase.', target:'One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.', effect:'Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**.' },
@@ -5262,8 +5262,13 @@ const ARMIES = [
   id:'healybois', name:'Healybois', faction:'tyranids', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Take and Hold',
   detachments:['assimilation-swarm','talons-of-the-norn-queen'],
-  source:'New Recruit, exported 22 Nov 2026 (JSON)',
+  source:'New Recruit, exported 26 Nov 2026 (JSON)',
   units:[
+    {
+      id:'the-red-terror', ds:'tyranids/the-red-terror', pts:120,
+      models:['1× The Red Terror'],
+      gear:[['Gaping maw','Scything talons']]
+    },
     {
       id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
       leads:'Tyrant Guard',
@@ -5292,23 +5297,22 @@ const ARMIES = [
       why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Tyrant Guard', ptsNote:'the points of its parts as the list has them (The Swarmlord + Tyrant Guard)' }
     },
     {
-      id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:390, ptsNote:'220 + Tyrant Guard 170', enhancement:'Parasitic Biomorphology',
+      id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:365, ptsNote:'195 + Tyrant Guard 170',
       leads:'Tyrant Guard',
       models:['1× Hive Tyrant','6× Tyrant Guard'],
-      gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Bone cleaver, lash whip and rending claws']],
+      gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Scything talons and rending claws']],
       stats:[
         { name:'Hive Tyrant' },
         { name:'Tyrant Guard ×6' }
       ],
       melee:[
-        { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant', S:'10', from:{ S:'Parasitic Biomorphology' } },
-        { name:'Monstrous scything talons', who:'Hive Tyrant', S:'8', from:{ S:'Parasitic Biomorphology' } },
-        { name:'Bone cleaver, lash whip and rending claws', who:'Tyrant Guard', n:6, S:'6', from:{ S:'Parasitic Biomorphology' } }
+        { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant' },
+        { name:'Monstrous scything talons', who:'Hive Tyrant' },
+        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6 }
       ],
       abilities:[
         { name:'Will of the Hive Mind', who:'Hive Tyrant' },
         { name:'Onslaught', who:'Hive Tyrant' },
-        { name:'Parasitic Biomorphology', who:'Hive Tyrant', tag:'Enhancement', ph:['fight'], turn:'either', text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' },
         { name:'Guardian Organism', who:'Tyrant Guard' }
       ],
       kw:['Monster','Character','Psyker','Great Devourer','Synapse','Hive Tyrant','Infantry','Tyrant Guard','Faction: Tyranids'],
@@ -5322,7 +5326,7 @@ const ARMIES = [
       gear:[['Chitin-barbed limbs','Spore mine launcher']]
     },
     {
-      id:'pyrovores', ds:'tyranids/pyrovores', pts:100, copies:2,
+      id:'pyrovores', ds:'tyranids/pyrovores', pts:100,
       models:['3× Pyrovore'],
       gear:[['Chitin-barbed limbs','Flamespurt']],
       stats:[
@@ -5338,26 +5342,15 @@ const ARMIES = [
     {
       id:'ripper-swarms', ds:'tyranids/ripper-swarms', pts:30,
       models:['1× Ripper Swarm'],
-      gear:[['Chitinous claws and teeth']],
-      ranged:null
+      gear:[['Chitinous claws and teeth','Spinemaw']]
     },
     {
-      id:'norn-assimilator-synaptoprescience', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
-      models:['1× Norn Assimilator'],
-      gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
-      stats:[
-        { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
-      ],
-      abilities:[
-        { name:'Singular Purpose' },
-        { name:'Harpoon Barbs' },
-        { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
-        { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
-      ]
+      id:'haruspex', ds:'tyranids/haruspex', pts:125,
+      models:['1× Haruspex'],
+      gear:[['Grasping tongue','Ravenous maw','Shovelling claws']]
     },
     {
-      id:'norn-assimilator-synaptoprescience-2', ds:'tyranids/norn-assimilator', pts:300, enhancement:'Synaptoprescience',
+      id:'norn-assimilator', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
       models:['1× Norn Assimilator'],
       gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
       stats:[
@@ -5386,6 +5379,15 @@ const ARMIES = [
       id:'psychophage', ds:'tyranids/psychophage', pts:110,
       models:['1× Psychophage'],
       gear:[['Psychoclastic torrent','Talons and betentacled maw']]
+    },
+    {
+      id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
+      models:['1× Tyrannofex'],
+      gear:[['Powerful limbs','Stinger salvoes','Acid spray']],
+      ranged:[
+        { name:'Acid spray' },
+        { name:'Stinger salvoes' }
+      ]
     },
     {
       id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', role:'Reference', pts:0,
@@ -7672,13 +7674,36 @@ const DATASHEETS = {
     { on:'Tyrannofex', choices:[{ name:'Rupture cannon', pts:20 },{ name:'Fleshborer hive' },{ name:'Acid spray' }], group:'Fleshborer Hive', min:1, max:1 }
   ]
 },
+'tyranids/the-red-terror':{
+  name:'The Red Terror', faction:'tyranids', role:'Epic Hero',
+  stats:[
+    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
+  ],
+  melee:[
+    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
+    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.', sumAtk:'vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed', sumAtkOf:'975667a2' },
+    { name:'Subterranean Hunter', ph:['fight'], turn:'either', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
+  ],
+  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
+  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
+  composition:[
+    { model:'The Red Terror', min:1, max:1 }
+  ],
+  options:[
+    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
+  ]
+},
 'tyranids/tyrant-guard':{
   name:'Tyrant Guard', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Tyrant Guard', M:'6"', T:'8', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
   ],
   melee:[
-    { name:'Bone cleaver, lash whip and rending claws', range:'Melee', A:'3', WS:'3+', AP:'-1', D:'2', kw:[], S:'5' },
+    { name:'Bone cleaver, lash whip and rending claws', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'2', kw:[] },
     { name:'Crushing claws and rending claws', range:'Melee', A:'2', WS:'4+', S:'8', AP:'-2', D:'2', kw:['TWIN-LINKED'] },
     { name:'Scything talons and rending claws', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
   ],
@@ -7757,7 +7782,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Chitinous Horrors', tag:'Aura', text:'While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit.', sumFoe:'Enemies in Engagement Range: OC halved', sumFoeOf:'c886681b' }
   ],
-  rules:['Deep Strike','Synapse','Sustained Hits'],
+  rules:['Deep Strike','Synapse','Sustained Hits','Pistol'],
   kw:['Swarm','Great Devourer','Harvester','Ripper Swarms','Faction: Tyranids'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:30 },{ models:2, pts:40 },{ models:3, pts:50 }] }] },
   composition:[
@@ -7766,6 +7791,32 @@ const DATASHEETS = {
   options:[
     { on:'Ripper Swarm', choices:[{ name:'Chitinous claws and teeth', min:1, max:1 }] },
     { on:'Ripper Swarm', choices:[{ name:'Spinemaw', max:1 }], group:'Spinemaw', max:1 }
+  ]
+},
+'tyranids/haruspex':{
+  name:'Haruspex', faction:'tyranids', role:'Monster',
+  stats:[
+    { name:'Haruspex', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
+  ],
+  ranged:[
+    { name:'Grasping tongue', range:'12"', A:'1', BS:'3+', S:'6', AP:'-2', D:'D6+1', kw:['PRECISION'] }
+  ],
+  melee:[
+    { name:'Ravenous maw', range:'Melee', A:'14', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] },
+    { name:'Shovelling claws', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:['EXTRA ATTACKS'] }
+  ],
+  abilities:[
+    { name:'Grisly Spectacle', ph:['fight'], turn:'either', text:'Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a **Battle-shock test**.' },
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+  ],
+  rules:['Deadly Demise D3','Synapse','Precision','Extra Attacks'],
+  kw:['Monster','Great Devourer','Harvester','Haruspex','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:125 }] },{ from:3, to:null, models:[{ models:1, pts:135 }] }] },
+  composition:[
+    { model:'Haruspex', min:1, max:1 }
+  ],
+  options:[
+    { on:'Haruspex', choices:[{ name:'Grasping tongue', min:1, max:1 },{ name:'Shovelling claws', min:1, max:1 },{ name:'Ravenous maw', min:1, max:1 }], group:'Wargear' }
   ]
 },
 'tyranids/psychophage':{
@@ -7804,29 +7855,6 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Synapse'],
   kw:['Beast','Fly','Great Devourer','Spore Mines','Faction: Tyranids']
-},
-'tyranids/the-red-terror':{
-  name:'The Red Terror', faction:'tyranids', role:'Epic Hero',
-  stats:[
-    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
-  ],
-  melee:[
-    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
-    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
-  ],
-  abilities:[
-    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.', sumAtk:'vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed', sumAtkOf:'975667a2' },
-    { name:'Subterranean Hunter', ph:['fight'], turn:'either', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
-  ],
-  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
-  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
-  composition:[
-    { model:'The Red Terror', min:1, max:1 }
-  ],
-  options:[
-    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
-  ]
 },
 'tyranids/tyranid-prime-with-lash-whip':{
   name:'Tyranid Prime with Lash Whip', faction:'tyranids', role:'Character',
@@ -8565,33 +8593,6 @@ const DATASHEETS = {
   ],
   options:[
     { on:'Toxicrene', choices:[{ name:'Massive toxic lashes', min:1, max:1 }], group:'Wargear' }
-  ],
-  aiStatus:'not-read'
-},
-'tyranids/haruspex':{
-  name:'Haruspex', faction:'tyranids', role:'Monster',
-  stats:[
-    { name:'Haruspex', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
-  ],
-  ranged:[
-    { name:'Grasping tongue', range:'12"', A:'1', BS:'3+', S:'6', AP:'-2', D:'D6+1', kw:['PRECISION'] }
-  ],
-  melee:[
-    { name:'Ravenous maw', range:'Melee', A:'14', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] },
-    { name:'Shovelling claws', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:['EXTRA ATTACKS'] }
-  ],
-  abilities:[
-    { name:'Grisly Spectacle', text:'Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a **Battle-shock test**.' },
-    { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
-  ],
-  rules:['Deadly Demise D3','Synapse','Precision','Extra Attacks'],
-  kw:['Monster','Great Devourer','Harvester','Haruspex','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:125 }] },{ from:3, to:null, models:[{ models:1, pts:135 }] }] },
-  composition:[
-    { model:'Haruspex', min:1, max:1 }
-  ],
-  options:[
-    { on:'Haruspex', choices:[{ name:'Grasping tongue', min:1, max:1 },{ name:'Shovelling claws', min:1, max:1 },{ name:'Ravenous maw', min:1, max:1 }], group:'Wargear' }
   ],
   aiStatus:'not-read'
 },
@@ -12818,15 +12819,17 @@ const NR_IDS = {
     "fellhammer-siege-task-force/vashtorr-the-arkifane":["dcc0-b70c-9779-e6c9|1×1a34-f1cc-ec01-ca32,1×3667-92c8-a7e5-1ccd,1×e02b-6f8f-cbee-fa79"],
     "fellhammer-siege-task-force/warpsmith":["440-a22a-eac1-b107|1×244-694c-22c-74fb,1×5762-3c1f-658e-368,1×9e5d-6700-e6d9-5719,1×d0ac-5a84-221a-3dd7,1×e806-3c87-d3d5-e71d"],
     "healybois/biovores":["3f2c-85ec-d83c-4a2f|1×dd57-9c1f-d425-6711,1×dd57-9c1f-d425-6711/1fff-0a90-a8dd-28b5,1×dd57-9c1f-d425-6711/2d4b-61bd-f1f3-c32b"],
-    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×9785-ca88-1ecd-2d55,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/a6ee-80cb-5346-3c2a"],
-    "healybois/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
-    "healybois/norn-assimilator-synaptoprescience-2":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/haruspex":["6249-358f-27d7-ef60|1×3bf9-a705-9145-dbb9,1×7a6c-1971-6ffb-70b5,1×e240-8306-941-b848"],
+    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "healybois/norn-assimilator":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
     "healybois/norn-emissary":["5720-2873-8c2c-edc3|1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
     "healybois/psychophage":["b6ac-f091-a018-dab2|1×56f9-bb79-7be0-dbf2,1×9edf-e542-77fa-e4c2"],
     "healybois/pyrovores":["d2c6-bd0b-3205-3319|3×c543-2551-1f2a-bcec,3×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,3×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
-    "healybois/ripper-swarms":["1de2-b57b-aa0a-1f0d|1×7242-c911-e611-551e,1×7242-c911-e611-551e/f5e3-ad89-8888-4bd4"],
+    "healybois/ripper-swarms":["1de2-b57b-aa0a-1f0d|1×7242-c911-e611-551e,1×7242-c911-e611-551e/3849-e3e0-4d2d-a259,1×7242-c911-e611-551e/f5e3-ad89-8888-4bd4"],
     "healybois/spore-mines-biovore":["80c2-aecc-5b59-7345|1×1a43-6f35-30bd-ec50"],
+    "healybois/the-red-terror":["7173-1bd9-b60b-6555|1×7190-e583-dade-fdb6,1×8f4b-dfff-77d2-b215"],
     "healybois/the-swarmlord-tyrant-guard":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55,1×ceab-62d9-31bf-7c61","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "healybois/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
     "infernal-lance/chaos-cerastus-knight-lancer":["4175-82c6-8e96-bef8|1×545a-eead-e216-5939,1×c799-77ce-c706-3079"],
     "infernal-lance/knight-despoiler":["0119-8c04-435e-c782|1×005c-b2d1-4432-415a,1×3bee-8c85-68f7-e54b,1×3f41-4b71-a07b-506a,1×4268-2d76-f972-d7f5,1×4268-2d76-f972-d7f5/89c4-132e-6ad6-2a08,1×4268-2d76-f972-d7f5/f4a1-7f17-ec57-6c69,1×48a2-a603-9607-4df8,1×48a2-a603-9607-4df8/89c4-132e-6ad6-2a08,1×48a2-a603-9607-4df8/f4a1-7f17-ec57-6c69,1×4ff3-7dce-5a52-94e9,1×dfe8-cea0-8d16-db95"],
@@ -13043,6 +13046,7 @@ const NR_IDS = {
     "5800-3978-370d-b573":"chaos-daemons/daemon-prince-of-chaos-with-wings",
     "5d3d-e13b-8b76-dad3":"thousand-sons/rubric-marines",
     "5f23-4d6-f2f9-5973":"chaos-daemons/flamers",
+    "6249-358f-27d7-ef60":"tyranids/haruspex",
     "642f-9302-4fdc-ab68":"tyranids/neurolictor",
     "656c-8b78-8e59-0591":"emperors-children/maulerfiend",
     "66f4-929e-1769-f277":"thousand-sons/daemon-prince-of-tzeentch-with-wings",
@@ -13320,6 +13324,7 @@ const NR_IDS = {
     "379d-5b8f-fa70-f892":"Ophydian hyperphase weapons",
     "37a7-d156-1e4c-8fe1":"Cerastus Knight Atrapos",
     "3811-a215-d4a1-d197":"Umbralefic Crystal",
+    "3849-e3e0-4d2d-a259":"Spinemaw",
     "3854-44a6-5746-d602":"Close combat weapon",
     "38c3-d575-5d7b-6ba9":"Close combat weapon",
     "38fb-1df5-8eb6-fdf6":"Khorne Berzerker Champion",
@@ -13334,6 +13339,7 @@ const NR_IDS = {
     "3b81-de3e-f72c-b208":"Reconnaissance",
     "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
     "3bee-8c85-68f7-e54b":"Warlord",
+    "3bf9-a705-9145-dbb9":"Grasping tongue",
     "3bfa-bf00-b5ed-cc81":"Ahriman",
     "3cbf-631a-2bbe-6b54":"Rubric Marine w/ soulreaper cannon",
     "3d5c-4127-b923-d579":"Boltgun",
@@ -13475,6 +13481,7 @@ const NR_IDS = {
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "6155-c404-a228-cb72":"Bolt Rifle",
     "615e-5655-130f-d14a":"Plasma executor",
+    "6249-358f-27d7-ef60":"Haruspex",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
     "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
     "62ab-b83f-26b-b699":"Techno-virus injector",
@@ -13576,6 +13583,7 @@ const NR_IDS = {
     "7998-d0a-baa4-e8b3":"Skarbrand",
     "7a17-4fb0-c0f5-e22":"Bone Sabres",
     "7a3e-cedf-9f08-fcac":"Martial Ka'tah Reference",
+    "7a6c-1971-6ffb-70b5":"Shovelling claws",
     "7acc-f148-1490-419d":"Monomolecular Combat Knife",
     "7b06-be3a-9754-1bd4":"Runt Swarm",
     "7b41-35aa-3265-14d7":"Augury Uplink",
@@ -13688,7 +13696,6 @@ const NR_IDS = {
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
     "9707-82cf-9501-fb43":"Gitstikka",
     "9754-481c-c292-a1f9":"Warlord",
-    "9785-ca88-1ecd-2d55":"Parasitic Biomorphology",
     "98ba-1a51-57f5-38fc":"Voice eater",
     "9916-8701-bbbd-780e":"Blade of Magnus",
     "9932-3d2b-1e47-d53b":"Exalted Eightbound",
@@ -13746,7 +13753,6 @@ const NR_IDS = {
     "a61b-434-6817-679a":"Herd banner",
     "a661-6877-04db-c7e0":"Hormagaunt talons",
     "a6ad-d379-46ee-2c24":"Detachment",
-    "a6ee-80cb-5346-3c2a":"Bone cleaver, lash whip and rending claws",
     "a797-f585-4ad5-d786":"Two particle beamers",
     "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
@@ -13945,6 +13951,7 @@ const NR_IDS = {
     "e135-2748-1287-ec58":"Gauntlet of Fire",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
+    "e240-8306-941-b848":"Ravenous maw",
     "e296-4a38-d9a5-289c":"Detachment",
     "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
@@ -14099,7 +14106,6 @@ const NR_IDS = {
     "8ba4-a299-ac96-fbc5":3,
     "8d0b-296c-5515-4267":1,
     "91dc-9aad-0505-52a8":1,
-    "9785-ca88-1ecd-2d55":1,
     "a136-76f7-34d1-8035":1,
     "a336-1346-0281-b4b2":3,
     "a886-5b5b-d3b2-cf38":1,
@@ -14387,6 +14393,7 @@ const CHECKLIST = {
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|8yl01e":{"u":"fight:either","a":1},
+  "a|911utx":{"u":"fight:either","a":1},
   "a|92qgnt":{"u":"shooting:opp"},
   "a|97frp":{"u":"shooting:either","a":1},
   "a|9dsaql":{"none":1},
@@ -14525,7 +14532,6 @@ const CHECKLIST = {
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
   "a|udum88":{"u":"shooting:your,fight:either"},
   "a|uj59ei":{"u":"shooting:your,fight:either"},
-  "a|uulhog":{"t":"fight:either","u":"fight:either"},
   "a|uwea7i":{"x":1},
   "a|v2j916":{"t":"shooting:your","s":1},
   "a|v9g10a":{"u":"movement:your,charge:either"},
@@ -14933,6 +14939,7 @@ const BOXES = {
   "a|8kfs3x":{"d":[{"quote":"While this model is within 3\" of one or more friendly **HERETIC ASTARTES VEHICLE** units, this model has the **Lone Operative** ability.","df":[["loneOp",true]],"on":[["nearFriendly",{"d":3,"kw":"heretic astartes vehicle"}]],"kind":"all","scope":{"models":"model"}}],"n":"Warpsmith"},
   "a|8p52es":{"b":[{"quote":"This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.","fx":[["anti","CHARACTER 2+"]],"on":[],"kind":"ranged","lead":"**NORN EMISSARY** unit only."}],"n":"Destabilising Predation"},
   "a|8yl01e":{"ox":[{"quote":"For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.","why":"mortal wounds"}],"n":"Exploding Horrors"},
+  "a|911utx":{"ox":[{"quote":"Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a **Battle-shock test**.","why":"a test or roll of the battle (Battle-shock, Leadership, Desperate Escape, Psychic, a Blessings of Khorne roll, a Ritual)"}],"n":"Grisly Spectacle"},
   "a|92qgnt":{"d":[{"quote":"Ranged attacks that target this unit have -1 **D**.","df":[["dmgMinus",1]],"on":[],"kind":"ranged"}],"n":"Guardian Eternal"},
   "a|97frp":{"dnc":[{"quote":"On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot.","why":"about attacks against it, in words no catalogue effect reads"}],"n":"Repulsor Grid"},
   "a|9dsaql":{"n":"Scryer of Fates"},
@@ -15083,7 +15090,6 @@ const BOXES = {
   "a|uc39pe":{"b":[{"quote":"This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.","fx":[["a",1],["skill",1],["s",1]],"on":[],"kind":"all","scope":{"weapon":"scavenged shivs"}}],"riled":true,"n":"Super Runts"},
   "a|udum88":{"b":[{"quote":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["belowStarting",true]],"kind":"all","scope":{"models":"model"}},{"quote":"If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well.","fx":[["wound",1]],"on":[["belowStarting",true],["belowHalf",true]],"kind":"all","lead":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","scope":{"models":"model"}}],"n":"Glutton for Punishment"},
   "a|uj59ei":{"d":[{"quote":"While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.","df":[["hitMinus",1]],"on":[["q","While an enemy unit is within 6\" of this model"]],"kind":"all","foe":true},{"quote":"While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.","df":[["woundMinus",1]],"on":[["q","While an enemy unit is within 6\" of this model"],["attackerBelowHalf",true]],"kind":"all","foe":true}],"n":"Encephalic Diffusion"},
-  "a|uulhog":{"b":[{"quote":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["s",1]],"on":[],"kind":"melee","lead":"**TYRANIDS** model only."},{"quote":"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["a",1]],"on":[["q","The first time the bearer's unit destroys an enemy unit in the Fight phase"],["q","while the bearer is within 6\" of one or more friendly HARVESTER units"]],"kind":"melee","lead":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","lasts":"battle"}],"n":"Parasitic Biomorphology"},
   "a|uwea7i":{"ox":[{"quote":"If you do increase the CP cost of that use of that **stratagem** by 1CP.","why":"Command points or a stratagem's cost"}],"n":"Malign Presence"},
   "a|v2j916":{"ox":[{"quote":"In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit.","why":"a selection, what follows is its effect"},{"quote":"While a unit is **detected**, that unit has +3\" **detection range**.","why":"a move, setting up or embarking (not a characteristic)"}],"n":"Purity of Execution"},
   "a|v9g10a":{"n":"Karnivore"},
@@ -15737,7 +15743,6 @@ const AGREE = {
     "a|uc39pe":{"b":["A"]},
     "a|udum88":{"b":["A","A"]},
     "a|uj59ei":{"d":[0,0]},
-    "a|uulhog":{"b":["A","A"]},
     "a|vaick5":{"b":["A"]},
     "a|vplgbc":{"b":["A"]},
     "a|vr3337":{"b":["A"]},
@@ -16034,7 +16039,6 @@ const BUILD_INDEX = {
     "Nazdreg’s Know-wotz":{"IGNORES COVER":"kw"},
     "Neverblade":{"A":{"add":1},"AP":{"add":-1},"S":{"add":2}},
     "Omnispex":{"IGNORES COVER":"kw"},
-    "Parasitic Biomorphology":{"S":{"add":1}},
     "Perfectionists":{"LETHAL HITS":"kw"},
     "Rain of Ruin":{"HEAVY":"kw"},
     "Relentless Rage":{"A":null},

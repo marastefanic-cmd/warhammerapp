@@ -1,0 +1,510 @@
+[
+ {
+  "army": "healybois",
+  "kind": "ability-sumAtk",
+  "where": "healybois · The Red Terror · Swallow Whole",
+  "judgement": {
+   "sumAtk": "vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed"
+  },
+  "source": {
+   "ability": "Swallow Whole",
+   "text": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
+  },
+  "key": "f6268252cde8449f",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Hive Tyrant · Will of the Hive Mind",
+  "judgement": {
+   "tag": "Once per battle round"
+  },
+  "source": {
+   "ability": "Will of the Hive Mind",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+  },
+  "key": "aa28911a6a85539b",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "judgement": {
+   "tag": "Aura, Psychic"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "fb72e7866950640e",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumAtk",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "judgement": {
+   "sumAtk": "Within 6\" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS]"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "072a6e063b9aa7d4",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumDef",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "judgement": {
+   "sumDef": "A CHARACTER leading this unit has Feel No Pain 5+"
+  },
+  "source": {
+   "ability": "Guardian Organism",
+   "text": "While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+  },
+  "key": "97e585ff613e5f98",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumAtk",
+  "where": "healybois · Pyrovores · Burning Spray",
+  "judgement": {
+   "sumAtk": "After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it)"
+  },
+  "source": {
+   "ability": "Burning Spray",
+   "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**."
+  },
+  "key": "4207b9b5c88ead95",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Ripper Swarms · Chitinous Horrors",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Chitinous Horrors",
+   "text": "While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit."
+  },
+  "key": "95d5aeff41ea229c",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumFoe",
+  "where": "healybois · Ripper Swarms · Chitinous Horrors",
+  "judgement": {
+   "sumFoe": "Enemies in Engagement Range: OC halved"
+  },
+  "source": {
+   "ability": "Chitinous Horrors",
+   "text": "While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit."
+  },
+  "key": "271cfac871966e8a",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumAtk",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "sumAtk": "Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "4053d2dd9eb771cf",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumDef",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "sumDef": "Picked at start of round 1: Feel No Pain 5+ on one objective"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "cd112b0489b13a52",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumSt",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "sumSt": "Picked at start of round 1: OC 15 on one objective"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "a0ac5edb1bfbf767",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumOv",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "sumOv": "Pick at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy; or Feel No Pain 5+ and OC 15 on one objective"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "b3260020caae3baa",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "judgement": {
+   "tag": "Once per turn"
+  },
+  "source": {
+   "ability": "Harpoon Barbs",
+   "text": "Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**."
+  },
+  "key": "0644cc8affb188cd",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Norn Assimilator · Protean Purpose",
+  "judgement": {
+   "tag": "Higher Imperatives · Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Protean Purpose",
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection)."
+  },
+  "key": "476544f109997d65",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Norn Assimilator · Synaptoprescience",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Synaptoprescience",
+   "text": "**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+  },
+  "key": "425ddf6d01b3a8a2",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Tyrannofex · Resilient Organism",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Resilient Organism",
+   "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+  },
+  "key": "e67650cc6bb48579",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumDef",
+  "where": "healybois · Tyrannofex · Resilient Organism",
+  "judgement": {
+   "sumDef": "Once per battle: one attack's Damage becomes 0"
+  },
+  "source": {
+   "ability": "Resilient Organism",
+   "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+  },
+  "key": "10466d864db8ddee",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-sumOv",
+  "where": "healybois · Tyrannofex · Resilient Organism",
+  "judgement": {
+   "sumOv": "Once per battle: one attack's Damage becomes 0"
+  },
+  "source": {
+   "ability": "Resilient Organism",
+   "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+  },
+  "key": "2e6f8b46019dd8f0",
+  "status": "carried over: approved under this key; its unit is new or changed in the healybois-5 export"
+ },
+ {
+  "army": "healybois",
+  "kind": "points",
+  "where": "points (healybois-5 export)",
+  "judgement": {
+   "app": {
+    "the-red-terror": 120,
+    "the-swarmlord-tyrant-guard": 380,
+    "hive-tyrant-tyrant-guard": 365,
+    "biovores": 60,
+    "pyrovores": 100,
+    "ripper-swarms": 30,
+    "haruspex": 125,
+    "norn-assimilator": 280,
+    "norn-emissary": 250,
+    "psychophage": 110,
+    "tyrannofex": 180,
+    "spore-mines-biovore": 0
+   },
+   "total": 2000
+  },
+  "source": {
+   "reason": "The healybois-5 export, 2000 of 2000, equal at GW’s costs unit by unit: The Red Terror 120; The Swarmlord 210 + Tyrant Guard (6) 170 = 380; Hive Tyrant 195 + Tyrant Guard (6) 170 = 365 (no enhancement: Parasitic Biomorphology 25 taken off); Biovores (1) 60; Pyrovores (3) 100 (one unit now: 1st to 2nd units); Ripper Swarms (1) 30, its Spinemaw free (GW prices no wargear for it); Haruspex 125 (1st to 2nd units); Norn Assimilator 250 (one now: YOUR 1ST UNIT) + Synaptoprescience 30 = 280; Norn Emissary 250 (1st unit); Psychophage 110; Tyrannofex 170 (1st to 2nd units) + Acid spray 10 = 180; Spore Mines (Biovore) 0 (reference sheet). The “2020” of a naive sum is the old 390 for the Hive Tyrant unit (220 with Parasitic Biomorphology).",
+   "evidence": [
+    "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: “YOUR UNIT COSTS 1 model 120”",
+    "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: “YOUR UNIT COSTS 1 model 210”",
+    "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html: “YOUR UNIT COSTS 1 model 195”",
+    "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: “YOUR UNIT COSTS 3 models 80 6 models 170” (no 2nd-unit cost: both units 170)",
+    "verify/.cache/waha/ds/tyranids_Biovores.html: “YOUR UNIT COSTS 1 model 60 2 models 100 3 models 140”",
+    "verify/.cache/waha/ds/tyranids_Pyrovores.html: “YOUR 1ST TO 2ND UNITS COST 1 model 40 2 models 70 3 models 100”",
+    "verify/.cache/waha/ds/tyranids_Ripper-Swarms.html: “YOUR UNIT COSTS 1 model 30 2 models 40 3 models 50”; WARGEAR OPTIONS “All models in this unit can each be equipped with 1 spinemaws.” (no “per” cost)",
+    "verify/.cache/waha/ds/tyranids_Haruspex.html: “YOUR 1ST TO 2ND UNITS COST 1 model 125 YOUR 3RD+ UNIT COSTS 1 model 135”",
+    "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: “YOUR 1ST UNIT COSTS 1 model 250 YOUR 2ND+ UNIT COSTS 1 model 270”",
+    "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: “YOUR 1ST UNIT COSTS 1 model 250 YOUR 2ND+ UNIT COSTS 1 model 270”",
+    "verify/.cache/waha/ds/tyranids_Psychophage.html: “YOUR UNIT COSTS 1 model 110”",
+    "verify/.cache/waha/ds/tyranids_Tyrannofex.html: “YOUR 1ST TO 2ND UNITS COST 1 model 170 YOUR 3RD+ UNIT COSTS 1 model 180 WARGEAR OPTIONS per Acid spray 10 per Rupture cannon 20”",
+    "verify/.cache/waha/tyranids.txt line 579: “- SynaptoprescienceUPGRADE 30 pts” (Talons of the Norn Queen)",
+    "verify/sources/nr-json/healybois.json: the same costs on each selection (Hive Tyrant 195, Acid spray 10, Spinemaw none), roster 2000",
+    "gate step points (verify/points.js) passes on them"
+   ]
+  },
+  "key": "2b1d13eda0155e6b"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Hive Tyrant + Tyrant Guard",
+  "judgement": {
+   "gear": [
+    [
+     "Monstrous bonesword and lash whip",
+     "Monstrous scything talons"
+    ],
+    [
+     "Scything talons and rending claws"
+    ]
+   ],
+   "melee": [
+    {
+     "name": "Monstrous bonesword and lash whip",
+     "who": "Hive Tyrant"
+    },
+    {
+     "name": "Monstrous scything talons",
+     "who": "Hive Tyrant"
+    },
+    {
+     "name": "Scything talons and rending claws",
+     "who": "Tyrant Guard",
+     "n": 6
+    }
+   ],
+   "enhancement": null,
+   "pts": 365
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "leads": "Tyrant Guard",
+   "change": "no Parasitic Biomorphology (no + S marks: GW’s S 9, 7 and 5); the Tyrant Guard back to Scything talons and rending claws (6×)"
+  },
+  "key": "ec4b32d3b5f52932"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Ripper Swarms",
+  "judgement": {
+   "gear": [
+    [
+     "Chitinous claws and teeth",
+     "Spinemaw"
+    ]
+   ],
+   "pts": 30
+  },
+  "source": {
+   "models": [
+    "1× Ripper Swarm"
+   ],
+   "datasheet": {
+    "name": "Spinemaw",
+    "range": "6\"",
+    "A": "4",
+    "BS": "5+",
+    "S": "3",
+    "AP": "0",
+    "D": "1",
+    "kw": [
+     "PISTOL"
+    ]
+   },
+   "gw": "Spinemaws [PISTOL] 6\" 4 5+ 3 0 1 (Faction Pack Tyranids line 819; Wahapedia “Spinemaws pistol 6\" 4 5+ 3 0 1”): New Recruit’s name Spinemaw kept"
+  },
+  "key": "3dff8fd681031e82"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Haruspex (new datasheet for the owner’s lists)",
+  "judgement": {
+   "gear": [
+    [
+     "Grasping tongue",
+     "Ravenous maw",
+     "Shovelling claws"
+    ]
+   ],
+   "pts": 125,
+   "row": "tyranids/haruspex (the catalogue row, now a list row: aiStatus not-read dropped; Grisly Spectacle ph fight, turn either by verify/derive.js)"
+  },
+  "source": {
+   "models": [
+    "1× Haruspex"
+   ],
+   "composition": "GW: “This model is equipped with: grasping tongue; ravenous maw; shovelling claws.”",
+   "base": "120×92mm Oval (Event Companion line 3817; New Recruit 120x92mm, declared in verify/deviations-nr.json)"
+  },
+  "key": "6f8993b989751ee4"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Tyrannofex",
+  "judgement": {
+   "gear": [
+    [
+     "Powerful limbs",
+     "Stinger salvoes",
+     "Acid spray"
+    ]
+   ],
+   "ranged": [
+    {
+     "name": "Acid spray"
+    },
+    {
+     "name": "Stinger salvoes"
+    }
+   ],
+   "pts": 180
+  },
+  "source": {
+   "models": [
+    "1× Tyrannofex"
+   ],
+   "note": "as on the list before 2026-11-23.4 (git 8cba527^); FRAME on the row (GW), base 120×92mm Oval (declared)"
+  },
+  "key": "faae9727971f202d"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · The Red Terror",
+  "judgement": {
+   "gear": [
+    [
+     "Gaping maw",
+     "Scything talons"
+    ]
+   ],
+   "pts": 120
+  },
+  "source": {
+   "models": [
+    "1× The Red Terror"
+   ],
+   "note": "as on the list before 2026-11-23.4 (git 8cba527^); its hand-file why restored"
+  },
+  "key": "764f1b412836f5e4"
+ },
+ {
+  "army": "healybois",
+  "kind": "code",
+  "where": "verify/build-parity.js N (healybois-5)",
+  "judgement": {
+   "changes": [
+    "Protean Purpose expectations (N with Talons, and the two profile negatives): [Norn Assimilator, Norn Emissary] (one Assimilator in the healybois-5 export)",
+    "the enhancement negatives (on a non-CHARACTER, on an EPIC HERO, two on one unit) add Parasitic Biomorphology (the healybois-4 export’s selection, PB) with the Ripper Swarms (30) taken out to stay within 2000 (builder.js refuses a total over the limit); excluded by its words: Regenerating Monstrosity on the Hive Tyrant, which now has no enhancement; expected messages unchanged",
+    "a rule’s value more / less than it gives: held by Synaptoprescience’s InSv (3+ / 5+ against GW’s – with Synaptoprescience 4+), as no list now has Parasitic Biomorphology and BUILD_INDEX (made from the lists) no longer names its +1 S; with the S change on the Hive Tyrant the builder now answers “changed by a rule the app cannot name”",
+    "a datasheet over the unit limit: three copies of the one Pyrovores unit (4×), Norn Emissary and Norn Assimilator out to stay within 2000; message unchanged"
+   ]
+  },
+  "source": {
+   "file": "verify/build-parity.js"
+  },
+  "key": "8a2b8b47272d1dd9"
+ },
+ {
+  "army": "healybois",
+  "kind": "housekeeping",
+  "where": "healybois-5: removed and regenerated entries",
+  "judgement": {
+   "removed": [
+    "data.js FACTIONS tyranids Assimilation Swarm enhancement Parasitic Biomorphology: its sumAtk and sumAtkOf (AI summary, approved before) — gate step lines LM fails it as stale once no list shows its line; git keeps the text (“The bearer’s unit: +1 S in melee; after that unit first destroys an enemy unit in the Fight phase within 6\" of a HARVESTER: +1 A too for the battle”, cffd9038)",
+    "data.js BOXES/CHECKLIST/AGREE a|uulhog (Parasitic Biomorphology’s reading) and BUILD_INDEX marks Parasitic Biomorphology {S:+1}: derived from the lists (from-json --write, agree.js --write)",
+    "verify/sources/hand/healybois.json units.pyrovores (two units no longer: one Pyrovores unit)"
+   ],
+   "added": [
+    "verify/sources/hand/healybois.json units.the-red-terror (its why of before 2026-11-23.4) and units.haruspex (why); hive-tyrant-tyrant-guard and ripper-swarms why rewritten",
+    "verify/derive-agreed.json: 6 items, as verify/derive.js --agree gives them (only these taken): healybois · The Red Terror · Subterranean Hunter timing; Haruspex · Grisly Spectacle and Damaged timing; Tyrannofex · Resilient Organism timing and tag, Damaged timing (the three removed in 8cba527)",
+    "verify/deviations-nr.json: healybois haruspex and tyrannofex base 120x92mm (from-json --write)"
+   ],
+   "regenerated": [
+    "data.js (from-json --write: builder.js’s entry; NR_IDS, BUILD_INDEX, GRANTS, CHECKLIST, BOXES; AGREE by verify/agree.js --write)",
+    "verify/reader2/readings2.json (KODEX_APP/KODEX_CACHE node verify/reader2/reader2.js: The Red Terror, Haruspex, Tyrannofex keys in; Parasitic Biomorphology and the second Assimilator out)",
+    "verify/provenance.json (verify/texts.js)"
+   ]
+  },
+  "source": {
+   "fromJsonNotFilled": [
+    "Norn Assimilator · Toxinjecter Harpoon: GW check of the weapon (not on the Wahapedia datasheet under this name), as before",
+    "The Swarmlord · Designer’s Note (as before)",
+    "healybois · Ripper Swarms · Chitinous Horrors: ability timing (derive.js has no rule), as before"
+   ],
+   "consequence": "With no list holding Parasitic Biomorphology, a phone import of an export with it on a Hive Tyrant is refused on the +1 S (“changed by a rule the app cannot name”), and the enhancement has no summary line: the same as any other enhancement no list has"
+  },
+  "key": "dc27e85a69575b3f"
+ },
+ {
+  "army": "healybois",
+  "kind": "list-source",
+  "where": "healybois · source line",
+  "judgement": {
+   "source": "New Recruit, exported 26 Nov 2026 (JSON)",
+   "from": "verify/sources/hand/healybois.json source (from-json.js and reimport.js both read it; it overrides the commit date)"
+  },
+  "source": {
+   "why": "the day the owner exported this list from New Recruit and sent it (the upload of Healybois_-_2000pts_1.json is stamped 2026-11-26 11:04 UTC); the JSON export carries no date, and the commit that adds it to verify/sources/nr-json is only the day it was committed",
+   "evidence": "the owner’s upload Healybois_-_2000pts_1.json (sha256 33624ba61dcb31d0b80d37bcb3fdaef8fb479fd317516bff13ad9977a8129e69), file time 2026-11-26 11:04:09 UTC; the export has no date field (only generatedBy)",
+   "replaces": "New Recruit, exported 22 Nov 2026 (JSON)"
+  },
+  "key": "e0c023f84bc6c739"
+ }
+]

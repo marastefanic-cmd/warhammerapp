@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1381,
-  "sentences": 2683,
-  "read": 1373,
-  "readWithEffects": 694,
-  "readNoEffect": 679,
-  "unread": 1310,
-  "unreadOutside": 1023,
+  "sources": 1378,
+  "sentences": 2676,
+  "read": 1367,
+  "readWithEffects": 691,
+  "readNoEffect": 676,
+  "unread": 1309,
+  "unreadOutside": 1022,
   "unreadUnparsed": 287,
-  "gwFound": 2542,
+  "gwFound": 2535,
   "gwNotFound": 50,
   "gwShort": 91
  },
@@ -5792,6 +5792,71 @@
    "duration": null,
    "gw": "found"
   },
+  "ds:tyranids/the-red-terror|Swallow Whole|0": {
+   "owner": "ds:tyranids/the-red-terror",
+   "ownerName": "The Red Terror",
+   "source": "Swallow Whole",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time an attack with this model's gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "critWoundAll",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "targetKw",
+     "v": {
+      "any": [
+       "INFANTRY",
+       "MOUNTED",
+       "BEASTS"
+      ]
+     },
+     "table": "COND"
+    },
+    {
+     "id": "weapon",
+     "v": "gaping maw",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:tyranids/the-red-terror|Swallow Whole|1": {
+   "owner": "ds:tyranids/the-red-terror",
+   "ownerName": "The Red Terror",
+   "source": "Swallow Whole",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "Each time an INFANTRY, MOUNTED or BEASTS model is destroyed as a result of an attack made by this model's gaping maw, this model regains up to D3+2 lost wounds.",
+   "status": "unread",
+   "reason": "outside-vocabulary:healing / returning models",
+   "gw": "found"
+  },
+  "ds:tyranids/the-red-terror|Subterranean Hunter|0": {
+   "owner": "ds:tyranids/the-red-terror",
+   "ownerName": "The Red Terror",
+   "source": "Subterranean Hunter",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+   "status": "unread",
+   "reason": "outside-vocabulary:on destruction",
+   "gw": "found"
+  },
   "ds:tyranids/tyrant-guard|Guardian Organism|0": {
    "owner": "ds:tyranids/tyrant-guard",
    "ownerName": "Tyrant Guard",
@@ -5973,6 +6038,49 @@
    "text": "While an enemy unit is within Engagement Range of this unit, halve the Objective Control characteristic of models in that enemy unit.",
    "status": "unread",
    "reason": "unparsed:while an enemy unit is within engagement range of this unit, halve the objective control characteristic of models in tha",
+   "gw": "found"
+  },
+  "ds:tyranids/haruspex|Grisly Spectacle|0": {
+   "owner": "ds:tyranids/haruspex",
+   "ownerName": "Haruspex",
+   "source": "Grisly Spectacle",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "ds:tyranids/haruspex|Damaged: 1-5 Wounds Remaining|0": {
+   "owner": "ds:tyranids/haruspex",
+   "ownerName": "Haruspex",
+   "source": "Damaged: 1-5 Wounds Remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-5",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "ds:tyranids/psychophage|Bio-stimulus|0": {
@@ -6187,71 +6295,6 @@
    "text": "That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds.",
    "status": "unread",
    "reason": "outside-vocabulary:mortal wounds",
-   "gw": "found"
-  },
-  "ds:tyranids/the-red-terror|Swallow Whole|0": {
-   "owner": "ds:tyranids/the-red-terror",
-   "ownerName": "The Red Terror",
-   "source": "Swallow Whole",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "Each time an attack with this model's gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound.",
-   "status": "read",
-   "kind": "effect",
-   "effects": [
-    {
-     "table": "FX",
-     "id": "critWoundAll",
-     "v": true,
-     "attack": "any"
-    }
-   ],
-   "attack": "any",
-   "side": "attack",
-   "reach": {
-    "type": "self"
-   },
-   "conditions": [
-    {
-     "id": "targetKw",
-     "v": {
-      "any": [
-       "INFANTRY",
-       "MOUNTED",
-       "BEASTS"
-      ]
-     },
-     "table": "COND"
-    },
-    {
-     "id": "weapon",
-     "v": "gaping maw",
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/the-red-terror|Swallow Whole|1": {
-   "owner": "ds:tyranids/the-red-terror",
-   "ownerName": "The Red Terror",
-   "source": "Swallow Whole",
-   "sourceKind": "ability",
-   "idx": 1,
-   "text": "Each time an INFANTRY, MOUNTED or BEASTS model is destroyed as a result of an attack made by this model's gaping maw, this model regains up to D3+2 lost wounds.",
-   "status": "unread",
-   "reason": "outside-vocabulary:healing / returning models",
-   "gw": "found"
-  },
-  "ds:tyranids/the-red-terror|Subterranean Hunter|0": {
-   "owner": "ds:tyranids/the-red-terror",
-   "ownerName": "The Red Terror",
-   "source": "Subterranean Hunter",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
-   "status": "unread",
-   "reason": "outside-vocabulary:on destruction",
    "gw": "found"
   },
   "ds:tyranids/tyranid-prime-with-lash-whip|Alpha Warrior|0": {
@@ -7868,49 +7911,6 @@
    "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.",
    "status": "unread",
    "reason": "outside-vocabulary:mortal wounds",
-   "gw": "found"
-  },
-  "ds:tyranids/haruspex|Grisly Spectacle|0": {
-   "owner": "ds:tyranids/haruspex",
-   "ownerName": "Haruspex",
-   "source": "Grisly Spectacle",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
-   "status": "unread",
-   "reason": "outside-vocabulary:battle-shock / leadership",
-   "gw": "found"
-  },
-  "ds:tyranids/haruspex|Damaged: 1-5 Wounds Remaining|0": {
-   "owner": "ds:tyranids/haruspex",
-   "ownerName": "Haruspex",
-   "source": "Damaged: 1-5 Wounds Remaining",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-   "status": "read",
-   "kind": "effect",
-   "effects": [
-    {
-     "table": "FX",
-     "id": "hit",
-     "v": -1,
-     "attack": "any"
-    }
-   ],
-   "attack": "any",
-   "side": "attack",
-   "reach": {
-    "type": "self"
-   },
-   "conditions": [
-    {
-     "id": "woundsRemaining",
-     "v": "1-5",
-     "table": "own"
-    }
-   ],
-   "duration": null,
    "gw": "found"
   },
   "ds:tyranids/mawloc|Terror from the Deep|0": {
@@ -28058,118 +28058,8 @@
    "who": "Fluxmaster",
    "gw": "found"
   },
-  "army:healybois/hive-tyrant-tyrant-guard|Parasitic Biomorphology|0": {
-   "owner": "army:healybois/hive-tyrant-tyrant-guard",
-   "ownerName": "Hive Tyrant",
-   "source": "Parasitic Biomorphology",
-   "sourceKind": "unitAbility",
-   "idx": 0,
-   "text": "TYRANIDS model only.",
-   "status": "read",
-   "kind": "restriction",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [],
-   "duration": null,
-   "only": {
-    "kw": {
-     "any": [
-      "TYRANIDS"
-     ]
-    },
-    "of": "model"
-   },
-   "gw": "found"
-  },
-  "army:healybois/hive-tyrant-tyrant-guard|Parasitic Biomorphology|1": {
-   "owner": "army:healybois/hive-tyrant-tyrant-guard",
-   "ownerName": "Hive Tyrant",
-   "source": "Parasitic Biomorphology",
-   "sourceKind": "unitAbility",
-   "idx": 1,
-   "text": "Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit.",
-   "status": "read",
-   "kind": "effect",
-   "effects": [
-    {
-     "table": "FX",
-     "id": "s",
-     "v": 1,
-     "attack": "melee"
-    }
-   ],
-   "attack": "melee",
-   "side": "attack",
-   "reach": {
-    "type": "bearerUnit"
-   },
-   "conditions": [
-    {
-     "id": "onlyFor",
-     "v": {
-      "kw": {
-       "any": [
-        "TYRANIDS"
-       ]
-      },
-      "of": "model"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "who": "Hive Tyrant",
-   "gw": "found"
-  },
-  "army:healybois/hive-tyrant-tyrant-guard|Parasitic Biomorphology|2": {
-   "owner": "army:healybois/hive-tyrant-tyrant-guard",
-   "ownerName": "Hive Tyrant",
-   "source": "Parasitic Biomorphology",
-   "sourceKind": "unitAbility",
-   "idx": 2,
-   "text": "The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.",
-   "status": "read",
-   "kind": "effect",
-   "effects": [
-    {
-     "table": "FX",
-     "id": "a",
-     "v": 1,
-     "attack": "melee"
-    }
-   ],
-   "attack": "melee",
-   "side": "attack",
-   "reach": {
-    "type": "bearerUnit"
-   },
-   "conditions": [
-    {
-     "id": "firstTime",
-     "v": "the bearer's unit destroys an enemy unit in the fight phase while the bearer is within 6\" of one or more friendly HARVESTER units",
-     "table": "own"
-    },
-    {
-     "id": "onlyFor",
-     "v": {
-      "kw": {
-       "any": [
-        "TYRANIDS"
-       ]
-      },
-      "of": "model"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": "end of the battle",
-   "who": "Hive Tyrant",
-   "gw": "found"
-  },
-  "army:healybois/norn-assimilator-synaptoprescience|Protean Purpose|0": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience",
+  "army:healybois/norn-assimilator|Protean Purpose|0": {
+   "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
    "source": "Protean Purpose",
    "sourceKind": "unitAbility",
@@ -28198,8 +28088,8 @@
    "duration": null,
    "gw": "found"
   },
-  "army:healybois/norn-assimilator-synaptoprescience|Protean Purpose|1": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience",
+  "army:healybois/norn-assimilator|Protean Purpose|1": {
+   "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
    "source": "Protean Purpose",
    "sourceKind": "unitAbility",
@@ -28209,8 +28099,8 @@
    "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
-  "army:healybois/norn-assimilator-synaptoprescience|Synaptoprescience|0": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience",
+  "army:healybois/norn-assimilator|Synaptoprescience|0": {
+   "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
    "source": "Synaptoprescience",
    "sourceKind": "unitAbility",
@@ -28234,112 +28124,8 @@
    },
    "gw": "found"
   },
-  "army:healybois/norn-assimilator-synaptoprescience|Synaptoprescience|1": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience",
-   "ownerName": "Norn Assimilator",
-   "source": "Synaptoprescience",
-   "sourceKind": "unitAbility",
-   "idx": 1,
-   "text": "This unit has 4+ InSv.",
-   "status": "read",
-   "kind": "effect",
-   "effects": [
-    {
-     "table": "DF",
-     "id": "inv",
-     "v": 4
-    }
-   ],
-   "attack": null,
-   "side": "defence",
-   "reach": {
-    "type": "unit"
-   },
-   "conditions": [
-    {
-     "id": "onlyFor",
-     "v": {
-      "kw": {
-       "any": [
-        "NORN ASSIMILATOR"
-       ]
-      },
-      "of": "unit"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "army:healybois/norn-assimilator-synaptoprescience-2|Protean Purpose|0": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience-2",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "unitAbility",
-   "idx": 0,
-   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
-   "status": "read",
-   "kind": "activation",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [
-    {
-     "id": "oncePerBattle",
-     "table": "COND"
-    },
-    {
-     "id": "phase",
-     "v": {
-      "phase": "command",
-      "turn": "your"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "army:healybois/norn-assimilator-synaptoprescience-2|Protean Purpose|1": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience-2",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "unitAbility",
-   "idx": 1,
-   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
-   "status": "unread",
-   "reason": "outside-vocabulary:faction mechanic",
-   "gw": "found"
-  },
-  "army:healybois/norn-assimilator-synaptoprescience-2|Synaptoprescience|0": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience-2",
-   "ownerName": "Norn Assimilator",
-   "source": "Synaptoprescience",
-   "sourceKind": "unitAbility",
-   "idx": 0,
-   "text": "NORN ASSIMILATOR unit only.",
-   "status": "read",
-   "kind": "restriction",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [],
-   "duration": null,
-   "only": {
-    "kw": {
-     "any": [
-      "NORN ASSIMILATOR"
-     ]
-    },
-    "of": "unit"
-   },
-   "gw": "found"
-  },
-  "army:healybois/norn-assimilator-synaptoprescience-2|Synaptoprescience|1": {
-   "owner": "army:healybois/norn-assimilator-synaptoprescience-2",
+  "army:healybois/norn-assimilator|Synaptoprescience|1": {
+   "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
    "source": "Synaptoprescience",
    "sourceKind": "unitAbility",
