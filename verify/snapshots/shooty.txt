@@ -69,13 +69,6 @@ DETACHMENT
 DISPOSITION
 NEWEST FIRST
 RANDOM
-Murderband
-2000 pts
-BUILT-IN
-World Eaters · Berzerker Warband · Butchers of Khorne
-PURGE THE FOE
-, CHOSEN
-TAKE AND HOLD
 Healybois
 2000 pts
 BUILT-IN
@@ -83,6 +76,13 @@ Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
+Murderband
+2000 pts
+BUILT-IN
+World Eaters · Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 Basic Bitch
 2000 pts
 BUILT-IN
@@ -1202,7 +1202,7 @@ melee
 abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 ARMIES
-27 rows · 231 unit entries · 108 columns
+27 rows · 233 unit entries · 108 columns
 
 one row per list
 
@@ -1224,7 +1224,7 @@ detachments
 source
 config
 units
-ARMIES.units 231 rows
+ARMIES.units 233 rows
 
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
@@ -1428,13 +1428,13 @@ info
 infoKids
 9 ids
 units
-212 ids
+214 ids
 datasheets
-169 ids
+170 ids
 names
-889 ids
+892 ids
 maxPerList
-84 ids
+83 ids
 BUILD_INDEX
 5 parts · 5 columns
 
@@ -1462,7 +1462,7 @@ WRITTEN BYverify/effects-migrate.js --write
 
 KEYa| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words
 
-B, D, ST481 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
+B, D, ST479 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
 
 BOXES 848 rows
 n
@@ -1479,7 +1479,7 @@ dreach
 st
 snc
 ox
-BOXES.b 324 rows
+BOXES.b 322 rows
 
 one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
 
@@ -1655,7 +1655,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-24.1
+2026-11-26.1
 
 a list from an export
 3
@@ -1689,9 +1689,9 @@ the app’s: reads GW’s words sentence by sentence into BOXES (effects.js)
 Reader 2
 verify/reader2/: written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)
 
-481 boxes from 848 rules, abilities and stratagems:
+479 boxes from 848 rules, abilities and stratagems:
 
-385
+383
 both readers agree
 25
 a reviewed verdict quoting GW
@@ -1706,13 +1706,13 @@ the one AI part
 5
 The only AI layer
 gist 203
-sumAtk 150
+sumAtk 149
 sumDef 102
 sumSt 34
 sumOv 53
 sumFoe 11
 
-553 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
+552 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
 
 Each carries the AI label, and a tap on it opens GW’s full text.
 Each sits next to a fingerprint of the GW words it was written from (gistOf, sumAtkOf, sumDefOf, sumStOf, sumOvOf, sumFoeOf): when GW’s words change, the gate fails until it is written again.
